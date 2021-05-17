@@ -5,7 +5,7 @@ https://docs.docker.com/get-docker/
 
 ## Download Empyrean React App
 - open terminal (command promt for Windows)
-- `git clone https://rmarsh000@bitbucket.org/empyreancasino/empyrean-website.git`
+- `git clone https://USERNAME@bitbucket.org/empyreancasino/empyrean-website.git`
  
 ## Run React Site
 - from command line:
