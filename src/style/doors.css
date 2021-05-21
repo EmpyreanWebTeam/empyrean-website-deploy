@@ -32,10 +32,15 @@
   
   .gLeftandRight {
     height: 600px;
+    transition: .50s all;   
+    transition-delay: 2.4s;
   }
 
   .gLeftandRight:hover {
-    border-radius: 0%;
+    transition-duration: 5s;
+    transition-delay: 0.3s;
+    transition-timing-function: linear;
+    border-radius: 10%;
     box-shadow:
     inset 0 0 50px #fff,      /* inner white */
     inset 20px 0 80px #f0f,   /* inner left magenta short */
