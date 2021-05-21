@@ -1,0 +1,144 @@
+/* DOORS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    /* height: 100vh; */
+    width: 100%;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .wrapper {
+    /* height: 300px; */
+    width: 650px;
+    /* border: 1px solid #f1c70c; */
+    position: relative;
+    box-shadow: -2px 9px 40px 20px rgb(248, 248, 214);
+    /* 3D */
+    perspective: 1000px;
+  }
+  
+  .inside {
+    width: 609px;
+    height: 609px;
+  }
+  
+  .gLeftandRight {
+    height: 600px;
+    /* width: 250px; */
+  }
+  
+  img {
+    width: auto;
+    height: 50%;
+    object-fit: cover;
+  }
+  
+  .lDoor {
+    background-color: #000;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    /* inner layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .rDoor {
+    background-color: #000;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    /* inner layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  #left-door {
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    border-right: 1px solid black;
+    /* transition */
+    transform-origin: left;
+    transition: transform 5s;
+    transition-timing-function: ease-in-out;
+  }
+  
+  #right-door {
+    top: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    border-left: 1px solid black;
+    /* transition */
+    transform-origin: right;
+    transition: transform 5s;
+    transition-timing-function: ease-in-out;
+  }
+  
+  /* Door swing effect */
+  .wrapper:hover #left-door{
+    transform: rotateY(-140deg);
+  }
+  
+  .wrapper:hover #right-door{
+    transform: rotateY(140deg);
+  }
+  
+  .woodDoor {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .gLeft {
+    height: 237px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding-left: 348px; */
+    margin-left: 224px;
+  }
+  
+  .gLeft img {
+    height: 100%;
+    width: auto;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  .gRight {
+    height: 237px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding-right: 348px; */
+    margin-right: 224px;
+  }
+  
+  .gRight img {
+    height: 100%;
+    width: auto;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .stairCase {
+    height: 50%;
+    width: 50%;
+  }
