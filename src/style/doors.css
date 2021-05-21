@@ -9,7 +9,7 @@
   body {
     /* height: 100vh; */
     width: 100%;
-    background-color: gray;
+    background-color: #000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,7 +20,7 @@
     width: 650px;
     /* border: 1px solid #f1c70c; */
     position: relative;
-    box-shadow: -2px 9px 40px 20px rgb(248, 248, 214);
+    /* box-shadow: -2px 9px 40px 20px rgb(248, 248, 214); */
     /* 3D */
     perspective: 1000px;
   }
@@ -136,9 +136,4 @@
     width: auto;
     display: table-cell;
     vertical-align: middle;
-  }
-
-  .stairCase {
-    height: 50%;
-    width: 50%;
   }
