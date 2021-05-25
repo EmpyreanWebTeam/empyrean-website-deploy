@@ -41,8 +41,8 @@ body {
 }
 
 .gLeftandRight:hover {
-  transition-duration: 5s;
-  transition-delay: 0.3s;
+  transition-duration: 6s;
+  transition-delay: 0.2s;
   transition-timing-function: linear;
   border-radius: 10%;
   animation: animateGlow 10s ease infinite;
