@@ -46,7 +46,8 @@ body {
   transition-timing-function: linear;
   border-radius: 10%;
   animation: animateGlow 10s ease infinite;
-  /* transform: scale(2); */
+  transition: transform 15s;
+  transform: scale(2);
   margin: 0 auto;
   box-shadow:
   /* inner  */
