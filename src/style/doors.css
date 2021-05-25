@@ -106,11 +106,11 @@
   
   /* Door swing effect */
   .wrapper:hover #left-door{
-    transform: rotateY(140deg);
+    transform: rotateY(110deg);
   }
   
   .wrapper:hover #right-door{
-    transform: rotateY(-140deg);
+    transform: rotateY(-110deg);
   }
   
   .woodDoor {
