@@ -46,26 +46,25 @@ body {
   transition-timing-function: linear;
   border-radius: 10%;
   animation: animateGlow 10s ease infinite;
-  transition: transform 15s;
   /* transform: scale(2); */
   margin: 0 auto;
   box-shadow:
   /* inner  */
   inset 0 0 50px #fff,
   /* inner left  short */
-  inset 20px 0 80px rgb(255, 253, 159),
+  inset 20px 0 80px rgb(255, 217, 0),
   /* inner right  short */
-  inset -20px 0 80px rgba(217, 255, 0, 0.644),
+  inset -20px 0 80px #0ff,
   /* inner left  broad */
   inset 20px 0 300px rgb(255, 123, 0),
   /* inner right  broad */
-  inset -20px 0 300px rgb(255, 251, 159),
+  inset -20px 0 300px rgb(255, 251, 0),
   /* outer  */
   0 0 50px #fff,
   /* outer left  */
   -10px 0 80px rgb(255, 253, 159),
   /* outer right  */
-  10px 0 80px rgb(255, 253, 159);
+  10px 0 80px rgb(255, 251, 0);
 }
 
 @keyframes animateGlow {
