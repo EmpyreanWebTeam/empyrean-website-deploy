@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 
-//Components
+//Images
+import inside from '../images/swiperScreen.png';
+
 
 //Ease
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
@@ -47,7 +49,7 @@ const Model = ({ imageDetails }) => {
                 animate={{
                   y: -100,
                   width: "100%",
-                  height: window.innerWidth > 1440 ? 800 : 350,
+                  height: window.innerWidth > 1440 ? 800 : 400,
                   transition: { delay: 0.2, ...transition },
                 }}
                 className='thumbnail-single'>
@@ -56,7 +58,7 @@ const Model = ({ imageDetails }) => {
                   whileHover='hover'
                   transition={transition}>
                   <motion.img
-                    src={require("../images/swiperScreen.png")}
+                    src={inside}
                     alt='an image'
                     style={{ scale: scale }}
                     initial={{ scale: 1.0 }}

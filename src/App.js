@@ -1,25 +1,22 @@
 import React from "react";
+import { AnimatePresence } from "framer-motion";
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
 
 // Style
 import './App.scss';
 
 // Pages
-import DefaultLayout from './layouts/DefaultLayout';
-import Splash from './splash/Splash';
-import Dashboard from './pages/dashboard';
 import Home from './pages/home';
 import Model from './pages/model';
 
 
 function App() {
   const imageDetails = {
-    // width: 625,
+    width: 625,
     height: 650,
   };
 
