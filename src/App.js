@@ -2,30 +2,27 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 // Style
-import './App.css';
+import './App.scss';
 
 // Pages
 import DefaultLayout from './layouts/DefaultLayout';
 import Splash from './splash/Splash';
 import Dashboard from './pages/dashboard';
-import Model from "./pages/model";
 
 
 function App() {
   const imageDetails = {
-    width: 524,
+    // width: 625,
     height: 650,
   };
 
   return (
     <Router>
-      {/* <Header /> */}
       <Route
         render={({ location }) => (
           <AnimatePresence initial={false} exitBeforeEnter>
@@ -37,8 +34,8 @@ function App() {
               />
               <Route
                 exact
-                path='/model/:id'
-                render={() => <Model imageDetails={imageDetails} />}
+                path='/dashboard/:id'
+                render={() => <Dashboard imageDetails={imageDetails} />}
               />
             </Switch>
           </AnimatePresence>
