@@ -31,6 +31,13 @@ body {
   }
 }
 
+img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+
 @keyframes grain {
   0%,
   100% {
@@ -138,8 +145,9 @@ header {
 main {
   .container {
     position: relative;
+    padding-top: 10%;
     .row {
-      height: 150vh;
+      height: auto;
       align-items: center;
       .image-container {
         position: relative;
@@ -173,9 +181,10 @@ main {
 
 //single
 .single {
+  display: flex;
   .container {
     .top-row {
-      height: 575px;
+      height: 100%;
       width: 100%;
       align-items: flex-end;
       .top {
@@ -212,7 +221,7 @@ main {
       }
     }
     .bottom-row {
-      height: 50vh;
+      height: 100%;
       position: relative;
       .bottom {
         // height: 100%;

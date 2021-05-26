@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
+import { Link } from "react-router-dom";
 
 //Images
 import inside from '../images/swiperScreen.png';
+
+// Pages
+import Dashboard from './dashboard';
 
 
 //Ease
@@ -47,27 +51,29 @@ const Model = ({ imageDetails }) => {
                   height: imageDetails.height,
                 }}
                 animate={{
-                  y: -100,
+                  y: "-100%",
                   width: "100%",
                   height: window.innerWidth > 1440 ? 800 : 400,
                   transition: { delay: 0.2, ...transition },
                 }}
                 className='thumbnail-single'>
-                <motion.div
-                  className='frame-single'
-                  whileHover='hover'
-                  transition={transition}>
-                  <motion.img
-                    src={inside}
-                    alt='an image'
-                    style={{ scale: scale }}
-                    initial={{ scale: 1.0 }}
-                    animate={{
-                      transition: { delay: 0.2, ...transition },
-                      y: window.innerWidth > 1440 ? -1200 : -600,
-                    }}
-                  />
-                </motion.div>
+                <Link to='/dashboard'>
+                  <motion.div
+                    className='frame-single'
+                    whileHover='hover'
+                    transition={transition}>
+                      <motion.img
+                        src={inside}
+                        alt='an image'
+                        style={{ scale: scale }}
+                        initial={{ scale: 1.0 }}
+                        animate={{
+                          transition: { delay: 0.2, ...transition },
+                          y: window.innerWidth > 1440 ? 1200 : 600,
+                        }}
+                      />
+                  </motion.div>
+                </Link>
               </motion.div>
             </motion.div>
           </div>

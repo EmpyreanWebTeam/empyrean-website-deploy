@@ -37,6 +37,7 @@ const Home = ({ imageDetails, image }) => (
                   <div className='frame'>
                     <Link to={`/model/empyrean`}>
                       <ProgressiveImage
+                        className="insideTransition"
                         src={require("../images/swiperScreen.png")}
                         placeholder={require("../images/swiperScreen.png")}>
                         {(src) => (
