@@ -13,6 +13,8 @@ import './App.scss';
 import DefaultLayout from './layouts/DefaultLayout';
 import Splash from './splash/Splash';
 import Dashboard from './pages/dashboard';
+import Home from './pages/home';
+import Model from './pages/model';
 
 
 function App() {
@@ -30,12 +32,12 @@ function App() {
               <Route
                 exact
                 path='/'
-                render={() => <Splash imageDetails={imageDetails} />}
+                render={() => <Home imageDetails={imageDetails} />}
               />
               <Route
                 exact
-                path='/dashboard/:id'
-                render={() => <Dashboard imageDetails={imageDetails} />}
+                path='/model/:id'
+                render={() => <Model imageDetails={imageDetails} />}
               />
             </Switch>
           </AnimatePresence>
