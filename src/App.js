@@ -12,6 +12,7 @@ import './App.scss';
 // Pages
 import Home from './pages/home';
 import Model from './pages/model';
+import Dashboard from "./pages/dashboard";
 
 
 function App() {
@@ -35,6 +36,11 @@ function App() {
                 exact
                 path='/model/:id'
                 render={() => <Model imageDetails={imageDetails} />}
+              />
+              <Route
+                exact
+                path='/model/dashboard/:id'
+                render={() => <Dashboard />}
               />
             </Switch>
           </AnimatePresence>
