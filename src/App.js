@@ -5,6 +5,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
 // Style
 import './App.css';
@@ -12,45 +13,37 @@ import './App.css';
 // Pages
 import DefaultLayout from './layouts/DefaultLayout';
 import Splash from './splash/Splash';
-import Dashboard from './dashboard/dashboard';
+import Dashboard from './pages/dashboard';
+import Model from "./pages/model";
+
 
 function App() {
+  const imageDetails = {
+    width: 524,
+    height: 650,
+  };
+
   return (
     <Router>
-      <DefaultLayout>
-        <div className="App">
-          <ul>
-            <li>
-              <Link to="/">Splash</Link>
-            </li>
-            <li>
-              <Link to="/dashboard">Dashboard</Link>
-            </li>
-          </ul>
-          <Switch>
-            <Route exact path="/">
-              <Splash />
-            </Route>
-            <Route path="/dashboard">
-              <Dashboard />
-            </Route>
-          </Switch>
-          {/* <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>
-              Edit <code>src/App.js</code> and save to reload.
-            </p>
-            <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
-          </header> */}
-        </div>
-      </DefaultLayout>
+      {/* <Header /> */}
+      <Route
+        render={({ location }) => (
+          <AnimatePresence initial={false} exitBeforeEnter>
+            <Switch location={location} key={location.pathname}>
+              <Route
+                exact
+                path='/'
+                render={() => <Splash imageDetails={imageDetails} />}
+              />
+              <Route
+                exact
+                path='/model/:id'
+                render={() => <Model imageDetails={imageDetails} />}
+              />
+            </Switch>
+          </AnimatePresence>
+        )}
+      />
     </Router>
   );
 }
