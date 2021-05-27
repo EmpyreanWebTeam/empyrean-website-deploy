@@ -145,7 +145,6 @@ header {
 main {
   .container {
     position: relative;
-    padding-top: 2%;
     .row {
       height: auto;
       align-items: center;
@@ -154,6 +153,8 @@ main {
         .thumbnail {
           overflow: hidden;
           position: relative;
+          padding-top: 2%;
+          padding-bottom: 2%;
           .frame {
             img {
               width: 50%;

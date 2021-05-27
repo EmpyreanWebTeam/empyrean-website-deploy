@@ -45,7 +45,7 @@ const Home = ({ imageDetails, image }) => (
                           <motion.img
                             src={gDash}
                             alt='Empyrean'
-                            whileHover={{ scale: 1.1 }}
+                            whileHover={{ scale: 1.5 }}
                             transition={transition}
                           />
                         )}
