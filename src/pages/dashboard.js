@@ -1,20 +1,28 @@
-import React, { Component } from "react";
-import { Link,
-  NavLink,
-  Route 
- } from "react-router-dom";
+import { useState } from "react";
+import Main from "../components/main/Main";
+import Navbar from "../components/navbar/Navbar";
+import Sidebar from "../components/sidebar/Sidebar";
+
  
-import gDash from '../images/gameDashboard1.png';
-class Dashboard extends Component {
-  render() {
+
+const Dashboard = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const openSidebar = () => {
+    setSidebarOpen(true);
+  }
+
+  const closeSidebar = () => {
+    setSidebarOpen(false)
+  }
     return (
-      <Dashboard>
-        <div>
-          <img src={gDash}></img>
+        <div className="containerD">
+          <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
+          <Main />
+          <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} />
         </div>
-      </Dashboard>
     );
   }
-}
+
 
 export default Dashboard;

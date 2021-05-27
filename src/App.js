@@ -1,9 +1,11 @@
-import React from "react";
+import {React} from "react";
 import { AnimatePresence } from "framer-motion";
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  Link,
+  Redirect
 } from "react-router-dom";
 
 // Style
@@ -39,7 +41,8 @@ function App() {
               />
               <Route
                 exact
-                path='/model/dashboard/:id'
+                path='/dashboard'
+                component={Dashboard}
                 render={() => <Dashboard />}
               />
             </Switch>

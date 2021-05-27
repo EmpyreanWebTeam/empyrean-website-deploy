@@ -3,7 +3,7 @@ import { motion, useViewportScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
 
 //Images
-import inside from '../images/swiperScreen.png';
+import gDash from '../images/gameDashboard1.png';
 
 
 //Ease
@@ -60,13 +60,13 @@ const Model = ({ imageDetails }) => {
                     whileHover='hover'
                     transition={transition}>
                       <motion.img
-                        src={inside}
+                        src={gDash}
                         alt='an image'
                         style={{ scale: scale }}
                         initial={{ scale: 1.0 }}
                         animate={{
                           transition: { delay: 0.2, ...transition },
-                          y: window.innerWidth > 1440 ? 1200 : 600,
+                          y: window.innerWidth > 1440 ? 1200 : 500,
                         }}
                       />
                   </motion.div>

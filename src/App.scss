@@ -31,11 +31,11 @@ body {
   }
 }
 
-img {
-  width: auto;
-  height: 100%;
-  object-fit: cover;
-}
+// img {
+//   width: auto;
+//   height: 100%;
+//   object-fit: cover;
+// }
 
 
 @keyframes grain {
@@ -156,7 +156,9 @@ main {
           position: relative;
           .frame {
             img {
-              width: 100%;
+              width: 50%;
+              margin-left: 24%;
+              margin-top: 35%;
             }
           }
         }
@@ -237,7 +239,8 @@ main {
           .frame-single {
             img {
               position: absolute;
-              width: 100%;
+              width: 50%;
+              margin-left: 25%;
             }
           }
         }

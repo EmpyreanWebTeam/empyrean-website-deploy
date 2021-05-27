@@ -6,7 +6,8 @@ import ProgressiveImage from "react-progressive-image";
 // Images
 import gLeft from '../images/ecGateLeft.png';
 import gRight from '../images/ecGateRight.png';
-import inside from '../images/swiperScreen.png';
+// import inside from '../images/swiperScreen.png';
+import gDash from '../images/gameDashboard1.png';
 
 // Style
 import "../style/doors.css";
@@ -38,11 +39,11 @@ const Home = ({ imageDetails, image }) => (
                     <Link to={`/model/empyrean`}>
                       <ProgressiveImage
                         className="insideTransition"
-                        src={require("../images/swiperScreen.png")}
-                        placeholder={require("../images/swiperScreen.png")}>
+                        src={require("../images/gameDashboard1.png")}
+                        placeholder={require("../images/gameDashboard1.png")}>
                         {(src) => (
                           <motion.img
-                            src={inside}
+                            src={gDash}
                             alt='Empyrean'
                             whileHover={{ scale: 1.1 }}
                             transition={transition}
