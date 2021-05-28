@@ -14,6 +14,7 @@ import Home from './pages/home';
 import Model from './pages/model';
 import Dashboard from "./pages/dashboard";
 import Swiper from "./pages/swiper";
+import SwiperPage1 from "./pages/swiperPage1";
 
 
 function App() {
@@ -40,6 +41,11 @@ function App() {
               />
               <Route
                 exact
+                path='/swiperPage1/:id'
+                render={() => <SwiperPage1 imageDetails={imageDetails} />}
+              />
+              <Route
+                exact
                 path='/model/:id'
                 render={() => <Model imageDetails={imageDetails} />}
               />
@@ -47,7 +53,7 @@ function App() {
                 exact
                 path='/dashboard/:id'
                 component={Dashboard}
-                render={() => <Dashboard />}
+                render={() => <Dashboard imageDetails={imageDetails} />}
               />
             </Switch>
           </AnimatePresence>

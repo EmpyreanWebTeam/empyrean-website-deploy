@@ -3,7 +3,7 @@ import { motion, useViewportScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
 
 //Images
-import gDash from '../images/gameDashboard1.png';
+import gDash from '../images/gameStats/gameDashboard1.png';
 
 //Ease
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };

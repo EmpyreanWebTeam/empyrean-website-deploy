@@ -53,7 +53,7 @@ const SwiperPage_1 = ({ imageDetails }) => {
                   transition: { delay: 0.2, ...transition },
                 }}
                 className='thumbnail-single'>
-                <Link to='/dashboard'>
+                <Link to='/swiper'>
                 <motion.div
                   className='frame-single'
                   whileHover='hover'
