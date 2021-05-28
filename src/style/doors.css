@@ -47,23 +47,23 @@ body {
   /* transition: transform 15s; */
   /* transform: scale(2); */
   margin: 0 auto;
-  box-shadow:
+  /* box-shadow: */
   /* inner  */
-  inset 0 0 50px #fff,
+  /* inset 0 0 50px #fff, */
   /* inner left  short */
-  inset 20px 0 80px rgb(255, 217, 0),
+  /* inset 20px 0 80px rgb(223, 212, 155), */
   /* inner right  short */
-  inset -20px 0 80px #0ff,
+  /* inset -20px 0 80px #0ff, */
   /* inner left  broad */
-  inset 20px 0 300px rgb(255, 123, 0),
+  /* inset 20px 0 300px rgb(255, 123, 0), */
   /* inner right  broad */
-  inset -20px 0 300px rgb(255, 251, 0),
+  /* inset -20px 0 300px rgb(223, 212, 155), */
   /* outer  */
-  0 0 50px #fff,
+  /* 0 0 50px #fff, */
   /* outer left  */
-  -10px 0 80px rgb(255, 253, 159),
+  /* -10px 0 80px rgb(255, 253, 159), */
   /* outer right  */
-  10px 0 80px rgb(255, 251, 0);
+  /* 10px 0 80px rgb(223, 212, 155); */
 }
 
 @keyframes animateGlow {

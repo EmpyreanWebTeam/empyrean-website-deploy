@@ -3,9 +3,7 @@ import { AnimatePresence } from "framer-motion";
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link,
-  Redirect
+  Route
 } from "react-router-dom";
 
 // Style
@@ -15,6 +13,7 @@ import './App.scss';
 import Home from './pages/home';
 import Model from './pages/model';
 import Dashboard from "./pages/dashboard";
+import Swiper from "./pages/swiper";
 
 
 function App() {
@@ -36,12 +35,17 @@ function App() {
               />
               <Route
                 exact
+                path='/swiper/:id'
+                render={() => <Swiper imageDetails={imageDetails} />}
+              />
+              <Route
+                exact
                 path='/model/:id'
                 render={() => <Model imageDetails={imageDetails} />}
               />
               <Route
                 exact
-                path='/dashboard'
+                path='/dashboard/:id'
                 component={Dashboard}
                 render={() => <Dashboard />}
               />

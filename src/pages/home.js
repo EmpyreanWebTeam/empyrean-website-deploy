@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import ProgressiveImage from "react-progressive-image";
@@ -7,7 +7,7 @@ import ProgressiveImage from "react-progressive-image";
 import gLeft from '../images/ecGateLeft.png';
 import gRight from '../images/ecGateRight.png';
 // import inside from '../images/swiperScreen.png';
-import gDash from '../images/gameDashboard1.png';
+import swiperScreen from '../images/swiperScreen.png';
 
 // Style
 import "../style/doors.css";
@@ -36,13 +36,13 @@ const Home = ({ imageDetails, image }) => (
                     </img>
                   </div>
                   <div className='frame'>
-                    <Link to={`/model/empyrean`}>
+                    <Link to={`/swiper/empyrean`}>
                       <ProgressiveImage
-                        src={require("../images/gameDashboard1.png")}
-                        placeholder={require("../images/gameDashboard1.png")}>
+                        src={require("../images/swiperScreen.png")}
+                        placeholder={require("../images/swiperScreen.png")}>
                         {(src) => (
                           <motion.img
-                            src={gDash}
+                            src={swiperScreen}
                             alt='Empyrean'
                             whileHover={{ scale: 1.5 }}
                             transition={transition}

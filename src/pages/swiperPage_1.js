@@ -2,14 +2,15 @@ import React, { useEffect, useState } from "react";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
 
-//Images
-import gDash from '../images/gameDashboard1.png';
+// Images
+import swiperScreen from '../images/swiperScreen.png';
 
 //Ease
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
 
-const Model = ({ imageDetails }) => {
+
+const SwiperPage_1 = ({ imageDetails }) => {
   const { scrollYProgress } = useViewportScroll();
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
 
@@ -41,33 +42,33 @@ const Model = ({ imageDetails }) => {
             <motion.div className='image-container-single'>
               <motion.div
                 initial={{
-                  y: "-75%",
+                  y: "-50%",
                   width: imageDetails.width,
                   height: imageDetails.height,
                 }}
                 animate={{
-                  y: "-100%",
+                  y: -100,
                   width: "100%",
-                  height: window.innerWidth > 1440 ? 800 : 400,
+                  height: window.innerWidth > 1440 ? 800 : 350,
                   transition: { delay: 0.2, ...transition },
                 }}
                 className='thumbnail-single'>
                 <Link to='/dashboard'>
-                  <motion.div
-                    className='frame-single'
-                    whileHover='hover'
-                    transition={transition}>
-                      <motion.img
-                        src={gDash}
-                        alt='an image'
-                        style={{ scale: scale }}
-                        initial={{ scale: 1.0 }}
-                        animate={{
-                          transition: { delay: 0.2, ...transition },
-                          y: window.innerWidth > 1440 ? 1200 : 500,
-                        }}
-                      />
-                  </motion.div>
+                <motion.div
+                  className='frame-single'
+                  whileHover='hover'
+                  transition={transition}>
+                  <motion.img
+                    src={swiperScreen}
+                    alt='an image'
+                    style={{ scale: scale }}
+                    initial={{ scale: 1.0 }}
+                    animate={{
+                      transition: { delay: 0.2, ...transition },
+                      y: window.innerWidth > 1440 ? 1200 : 500,
+                    }}
+                  />
+                </motion.div>
                 </Link>
               </motion.div>
             </motion.div>
@@ -79,4 +80,4 @@ const Model = ({ imageDetails }) => {
   );
 };
 
-export default Model;
+export default SwiperPage_1;
