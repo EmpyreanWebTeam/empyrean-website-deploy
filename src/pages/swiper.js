@@ -1,168 +1,160 @@
-
 import React from "react";
-import { AnimatePresence } from "framer-motion";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
-import "swiper/swiper.min.css";
-import "swiper/components/effect-coverflow/effect-coverflow.min.css"
-import "swiper/components/navigation/navigation.min.css"
+// Style
+import "../style/swiper.scss"
 
-// Styles
-import "../style/swiper.scss";
-import "../App.scss";
+console.clear();
 
-// Images
-import img1 from "../images/gameStats/gameDashboard1.png";
-import img2 from "../images/gameStats/gameDashboard2.png";
-import img3 from "../images/gameStats/gameDashboard3.png";
-import img4 from "../images/gameStats/gameDashboard4.png";
-import img5 from "../images/gameStats/gameDashboard5.png";
-import img6 from "../images/gameStats/gameDashboard6.jpeg";
+const slides = [
+  {
+    title: "Machu Picchu",
+    subtitle: "Peru",
+    description: "Adventure is never far away",
+    image:
+      "https://images.unsplash.com/photo-1571771019784-3ff35f4f4277?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+  },
+  {
+    title: "Chamonix",
+    subtitle: "France",
+    description: "Let your dreams come true",
+    image:
+      "https://images.unsplash.com/photo-1581836499506-4a660b39478a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+  },
+  {
+    title: "Mimisa Rocks",
+    subtitle: "Australia",
+    description: "A piece of heaven",
+    image:
+      "https://images.unsplash.com/photo-1566522650166-bd8b3e3a2b4b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+  },
+  {
+    title: "Four",
+    subtitle: "Australia",
+    description: "A piece of heaven",
+    image:
+      "https://images.unsplash.com/flagged/photo-1564918031455-72f4e35ba7a6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+  },
+  {
+    title: "Five",
+    subtitle: "Australia",
+    description: "A piece of heaven",
+    image:
+      "https://images.unsplash.com/photo-1579130781921-76e18892b57b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+  }
+];
 
+function useTilt(active) {
+  const ref = React.useRef(null);
 
-// Pages
-import Home from '../pages/home';
-import Model from '../pages/model';
-import Dashboard from "../pages/dashboard";
+  React.useEffect(() => {
+    if (!ref.current || !active) {
+      return;
+    }
 
-// import Swiper core and required modules
-import SwiperCore, {
-  EffectCoverflow,Navigation,Pagination
-} from 'swiper/core';
+    const state = {
+      rect: undefined,
+      mouseX: undefined,
+      mouseY: undefined
+    };
 
-// install Swiper modules
-SwiperCore.use([EffectCoverflow,Navigation,Pagination]);
+    let el = ref.current;
 
+    const handleMouseMove = (e) => {
+      if (!el) {
+        return;
+      }
+      if (!state.rect) {
+        state.rect = el.getBoundingClientRect();
+      }
+      state.mouseX = e.clientX;
+      state.mouseY = e.clientY;
+      const px = (state.mouseX - state.rect.left) / state.rect.width;
+      const py = (state.mouseY - state.rect.top) / state.rect.height;
+
+      el.style.setProperty("--px", px);
+      el.style.setProperty("--py", py);
+    };
+
+    el.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      el.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, [active]);
+
+  return ref;
+}
+
+const initialState = {
+  slideIndex: 0
+};
+
+const slidesReducer = (state, event) => {
+  if (event.type === "NEXT") {
+    return {
+      ...state,
+      slideIndex: (state.slideIndex + 1) % slides.length
+    };
+  }
+  if (event.type === "PREV") {
+    return {
+      ...state,
+      slideIndex:
+        state.slideIndex === 0 ? slides.length - 1 : state.slideIndex - 1
+    };
+  }
+};
+
+function Slide({ slide, offset }) {
+  const active = offset === 0 ? true : null;
+  const ref = useTilt(active);
+
+  return (
+    <div
+      ref={ref}
+      className="slide"
+      data-active={active}
+      style={{
+        "--offset": offset,
+        "--dir": offset === 0 ? 0 : offset > 0 ? 1 : -1
+      }}
+    >
+      <div
+        className="slideBackground"
+        style={{
+          backgroundImage: `url('${slide.image}')`
+        }}
+      />
+      <div
+        className="slideContent"
+        style={{
+          backgroundImage: `url('${slide.image}')`
+        }}
+      >
+        <div className="slideContentInner">
+          <h2 className="slideTitle">{slide.title}</h2>
+          <h3 className="slideSubtitle">{slide.subtitle}</h3>
+          <p className="slideDescription">{slide.description}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 function SwiperJS() {
-     const imageDetails = {
-       width: 524,
-       height: 650,
-     };
-  
+  const [state, dispatch] = React.useReducer(slidesReducer, initialState);
+
   return (
-    <Router>
-      <Route
-        render={({ location }) => (
-            <AnimatePresence initial={false} exitBeforeEnter>
-                <Switch location={location} key={location.pathname}>
-                    <Swiper effect={'coverflow'}
-                            media={{
-                                '@media (max-width: 900px)': {
-                                  width: '600px',
-                                  height: '300px'
-                                },
-                                '@media (min-width: 900px)': {
-                                  width: '960px',
-                                  height: '600px'
-                                }
-                              }} 
-                            navigation={true}
-                            grabCursor={true} 
-                            centeredSlides={true} 
-                            slidesPerView={'auto'} 
-                            coverflowEffect={{
-                        "rotate": 50,
-                        "stretch": 0,
-                        "depth": 100,
-                        "modifier": 1,
-                        "slideShadows": true
-                        }} pagination={true} className="mySwiper">
-                    <SwiperSlide>
-                            <Route
-                                exact
-                                path='/'
-                                render={() => <Home imageDetails={imageDetails} />}
-                            />
-                            <Route
-                                exact
-                                path='/dashboard/:id' 
-                                children={({match}) => (
-                                    <li className={match ? 'active' : ''}>
-                                        <Link to="/dashboard">
-                                            <img src={img1} alt="image_1"/>
-                                        </Link>
-                                    </li>
-                                )}
-                                render={() => <Dashboard imageDetails={imageDetails} />}
-                                />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Route
-                                exact
-                                path='/swiperPage_2' children={({match}) => (
-                                    <li className={match ? 'active' : ''}>
-                                        <Link to="/swiperPage_2">
-                                            <img src={img2} alt="image_2"/>
-                                        </Link>
-                                    </li>
-                                )}
-                                render={() => <Home imageDetails={imageDetails} />}
-                                />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Route
-                                exact
-                                path='/swiperPage_3' children={({match}) => (
-                                    <li className={match ? 'active' : ''}>
-                                        <Link to="/swiperPage_3">
-                                            <img src={img3} alt="image_3"/>
-                                        </Link>
-                                    </li>
-                                )}
-                                render={() => <Home imageDetails={imageDetails} />}
-                                />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Route
-                                exact
-                                path='/swiperPage_4' children={({match}) => (
-                                    <li className={match ? 'active' : ''}>
-                                        <Link to="/swiperPage_4">
-                                            <img src={img4} alt="image_4"/>
-                                        </Link>
-                                    </li>
-                                )}
-                                render={() => <Home imageDetails={imageDetails} />}
-                                />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Route
-                                exact
-                                path='/swiperPage_5' children={({match}) => (
-                                    <li className={match ? 'active' : ''}>
-                                        <Link to="/swiperPage_5">
-                                            <img src={img5} alt="image_5"/>
-                                        </Link>
-                                    </li>
-                                )}
-                                render={() => <Home imageDetails={imageDetails} />}
-                                />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Route
-                                exact
-                                path='/swiperPage_6' children={({match}) => (
-                                    <li className={match ? 'active' : ''}>
-                                        <Link to="/swiperPage_6">
-                                            <img src={img6} alt="image_6"/>
-                                        </Link>
-                                    </li>
-                                )}
-                                render={() => <Home imageDetails={imageDetails} />}
-                                />
-                        </SwiperSlide>
-                    
-                    </Swiper>
-                </Switch>
-            </AnimatePresence>
-        )}
-      />
-    </Router>
-  )
+    <div className="slides">
+      <button onClick={() => dispatch({ type: "PREV" })}>‹</button>
+
+      {[...slides, ...slides, ...slides].map((slide, i) => {
+        let offset = slides.length + (state.slideIndex - i);
+        return <Slide slide={slide} offset={offset} key={i} />;
+      })}
+      <button onClick={() => dispatch({ type: "NEXT" })}>›</button>
+    </div>
+  );
 }
 
 export default SwiperJS;
