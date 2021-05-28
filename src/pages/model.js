@@ -43,7 +43,7 @@ const Model = ({ imageDetails }) => {
             <motion.div className='image-container-single'>
               <motion.div
                 initial={{
-                  y: "-50%",
+                  y: "-75%",
                   width: imageDetails.width,
                   height: imageDetails.height,
                 }}

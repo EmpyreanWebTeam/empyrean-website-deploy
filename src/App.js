@@ -19,7 +19,7 @@ import Dashboard from "./pages/dashboard";
 
 function App() {
   const imageDetails = {
-    width: 900,
+    width: 1200,
     height: 650,
   };
 

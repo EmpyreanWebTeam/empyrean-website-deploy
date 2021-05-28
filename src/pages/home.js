@@ -11,7 +11,7 @@ import gDash from '../images/gameDashboard1.png';
 
 // Style
 import "../style/doors.css";
-import "../App.scss";
+// import "../App.scss";
  
 const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
 
@@ -38,7 +38,6 @@ const Home = ({ imageDetails, image }) => (
                   <div className='frame'>
                     <Link to={`/model/empyrean`}>
                       <ProgressiveImage
-                        className="insideTransition"
                         src={require("../images/gameDashboard1.png")}
                         placeholder={require("../images/gameDashboard1.png")}>
                         {(src) => (

@@ -150,6 +150,7 @@ main {
       align-items: center;
       .image-container {
         position: relative;
+        width: 150%;
         .thumbnail {
           overflow: hidden;
           position: relative;
@@ -159,7 +160,7 @@ main {
             img {
               width: 50%;
               margin-left: 24%;
-              margin-top: 35%;
+              margin-top: 13%;
             }
           }
         }
@@ -242,6 +243,7 @@ main {
               position: absolute;
               width: 50%;
               margin-left: 25%;
+              margin-right: 25%;
             }
           }
         }

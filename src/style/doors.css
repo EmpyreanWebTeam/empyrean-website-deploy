@@ -16,11 +16,10 @@ body {
 
 .wrapper {
   /* height: 300px; */
-  width: 650px;
+  width: 100%;
   /* border: 1px solid #f1c70c; */
   position: relative;
   margin: 0 auto;
-  /* box-shadow: -2px 9px 40px 20px rgb(248, 248, 214); */
   /* 3D */
   perspective: 1000px;
   transform-style: preserve-3d;
@@ -243,7 +242,7 @@ body {
   justify-content: center;
   align-items: center;
   /* padding-left: 348px; */
-  margin-left: 224px;
+  margin-left: 497px;
 }
 
 .gLeft img {
@@ -260,7 +259,7 @@ body {
   justify-content: center;
   align-items: center;
   /* padding-right: 348px; */
-  margin-right: 224px;
+  margin-right: 497px;
 }
 
 .gRight img {
