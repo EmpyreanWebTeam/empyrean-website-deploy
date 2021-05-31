@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 // Style
 import "../style/swiper.scss"
@@ -10,6 +12,7 @@ const slides = [
     title: "My Dashboard",
     subtitle: "subtitle",
     description: "description",
+    link: "/dashboard",
     image:
       "https://jonedwards.tech/img/empyrean/gameStats/gameDashboard1.png"
   },
@@ -17,6 +20,7 @@ const slides = [
     title: "My Stats",
     subtitle: "subtitle",
     description: "description",
+    link: "/dashboard",
     image:
       "https://jonedwards.tech/img/empyrean/gameStats/gameDashboard2.png"
   },
@@ -24,6 +28,7 @@ const slides = [
     title: "Title",
     subtitle: "subtitle",
     description: "description",
+    link: "/dashboard",
     image:
       "https://jonedwards.tech/img/empyrean/gameStats/gameDashboard3.png"
   },
@@ -31,6 +36,7 @@ const slides = [
     title: "My Money",
     subtitle: "subtitle",
     description: "description",
+    link: "/dashboard",
     image:
       "https://jonedwards.tech/img/empyrean/gameStats/gameDashboard4.png"
   },
@@ -38,6 +44,7 @@ const slides = [
     title: "My Games",
     subtitle: "subtitle",
     description: "description",
+    link: "/dashboard",
     image:
       "https://jonedwards.tech/img/empyrean/gameStats/gameDashboard5.png"
   }
@@ -125,18 +132,21 @@ function Slide({ slide, offset }) {
           backgroundImage: `url('${slide.image}')`
         }}
       /> */}
-      <div
-        className="slideContent"
-        style={{
-          backgroundImage: `url('${slide.image}')`
-        }}
-      >
-        <div className="slideContentInner">
-          <h2 className="slideTitle">{slide.title}</h2>
-          <h3 className="slideSubtitle">{slide.subtitle}</h3>
-          <p className="slideDescription">{slide.description}</p>
+      <Link to={slide.link} style={{ textDecoration: 'none' }}>
+        <div
+          className="slideContent"
+          style={{
+            backgroundImage: `url('${slide.image}')`
+          }}
+        >
+
+          <div className="slideContentInner">
+            <h2 className="slideTitle">{slide.title}</h2>
+            <h3 className="slideSubtitle">{slide.subtitle}</h3>
+            <p className="slideDescription">{slide.description}</p>
+          </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 }

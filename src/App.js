@@ -51,7 +51,7 @@ function App() {
               />
               <Route
                 exact
-                path='/dashboard/:id'
+                path='/dashboard'
                 component={Dashboard}
                 render={() => <Dashboard imageDetails={imageDetails} />}
               />
