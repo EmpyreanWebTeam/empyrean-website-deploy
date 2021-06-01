@@ -26,10 +26,15 @@ body {
 }
 
 .inside {
-  width: 609px;
-  height: 609px;
+  width: 100%;
+  height: 25%;
   z-index: -1;
   position: relative;
+}
+
+.lounge {
+  width: 100%;
+  height: 400%;
 }
 
 .gLeftandRight {

@@ -6,7 +6,7 @@ import ProgressiveImage from "react-progressive-image";
 // Images
 import gLeft from '../images/ecGateLeft.png';
 import gRight from '../images/ecGateRight.png';
-// import inside from '../images/swiperScreen.png';
+import inside from '../images/throughTheDoors.png';
 import swiperScreen from '../images/swiperScreen.png';
 
 // Style
@@ -35,6 +35,9 @@ const Home = ({ imageDetails, image }) => (
                     <img src={gLeft} className="gLeft" alt="leftDoor">
                     </img>
                   </div>
+                  <div className="inside">
+                    <img src={inside} alt="inside" className="lounge"></img>
+                  </div>
                   <div className='frame'>
                     <Link to={`/swiper/empyrean`}>
                       <ProgressiveImage
@@ -51,7 +54,7 @@ const Home = ({ imageDetails, image }) => (
                       </ProgressiveImage>
                     </Link>
                   </div>
-                      {/* <img src={inside} alt="inside" className="inside"></img> */}
+              
                   <div id="right-door" className="rDoor">
                     <img src={gRight} className="gRight" alt="rightDoor">
                     </img>

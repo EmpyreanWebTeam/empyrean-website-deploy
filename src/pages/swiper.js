@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 // Style
 import "../style/swiper.scss"
 
+// Images
+import bg from '../images/throughTheDoors.png'
+
 console.clear();
 
 const slides = [
@@ -155,6 +158,7 @@ function SwiperJS() {
   const [state, dispatch] = React.useReducer(slidesReducer, initialState);
 
   return (
+    <div className="background">
     <div className="slides">
       <button onClick={() => dispatch({ type: "PREV" })}>‹</button>
 
@@ -163,6 +167,7 @@ function SwiperJS() {
         return <Slide slide={slide} offset={offset} key={i} />;
       })}
       <button onClick={() => dispatch({ type: "NEXT" })}>›</button>
+    </div>
     </div>
   );
 }
