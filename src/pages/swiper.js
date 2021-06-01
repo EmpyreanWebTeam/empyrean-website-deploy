@@ -5,8 +5,6 @@ import { Link } from "react-router-dom";
 // Style
 import "../style/swiper.scss"
 
-// Images
-import bg from '../images/throughTheDoors.png'
 
 console.clear();
 
@@ -159,15 +157,15 @@ function SwiperJS() {
 
   return (
     <div className="background">
-    <div className="slides">
-      <button onClick={() => dispatch({ type: "PREV" })}>‹</button>
+      <div className="slides">
+        <button onClick={() => dispatch({ type: "PREV" })}>‹</button>
 
-      {[...slides, ...slides, ...slides].map((slide, i) => {
-        let offset = slides.length + (state.slideIndex - i);
-        return <Slide slide={slide} offset={offset} key={i} />;
-      })}
-      <button onClick={() => dispatch({ type: "NEXT" })}>›</button>
-    </div>
+        {[...slides, ...slides, ...slides].map((slide, i) => {
+          let offset = slides.length + (state.slideIndex - i);
+          return <Slide slide={slide} offset={offset} key={i} />;
+        })}
+        <button onClick={() => dispatch({ type: "NEXT" })}>›</button>
+      </div>
     </div>
   );
 }

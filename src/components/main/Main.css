@@ -101,6 +101,13 @@ mainD {
     border: 0px solid #000000;
     padding: 15px;
   }
+
+  #charts_iframe {
+    padding: 25px;
+    border-radius: 5px;
+    background: #ffffff;
+    box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
+  }
   
   .charts__right {
     padding: 25px;
