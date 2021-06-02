@@ -28,17 +28,8 @@ body {
   align-items: center;
 }
 
-#myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
-}
-
-
 .background {
-  background-image: url("../images/throughTheDoors.png");
+  // background-image: url("../images/throughTheDoors.png");
   background-size: cover;
   background-position: 50% 50%;
   position: fixed;
