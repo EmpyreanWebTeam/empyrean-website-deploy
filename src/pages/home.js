@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import ProgressiveImage from "react-progressive-image";
 
+// Components
+import BackgroundVideo from "../components/backgroundVideo/backgroundVideo";
+
+
 // Images
 import gLeft from '../images/ecGateLeft.png';
 import gRight from '../images/ecGateRight.png';
@@ -11,8 +15,11 @@ import swiperScreen from '../images/swiperScreen.png';
 
 // Style
 import "../style/doors.css";
-// import "../App.scss";
- 
+
+// Video
+import "../videos/lounge.mp4";
+
+
 const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
 
 const Home = ({ imageDetails, image }) => (
@@ -31,13 +38,17 @@ const Home = ({ imageDetails, image }) => (
 
               <div className="wrapper">
                 <div className="gLeftandRight">
+                <div>
+                  <BackgroundVideo />
+                </div>
                   <div id="left-door" className="lDoor">
                     <img src={gLeft} className="gLeft" alt="leftDoor">
                     </img>
                   </div>
-                  <div className="inside">
+                  {/* <div className="inside">
                     <img src={inside} alt="inside" className="lounge"></img>
-                  </div>
+                  </div> */}
+                
                   <div className='frame'>
                     <Link to={`/swiper/empyrean`}>
                       <ProgressiveImage
@@ -47,7 +58,7 @@ const Home = ({ imageDetails, image }) => (
                           <motion.img
                             src={swiperScreen}
                             alt='Empyrean'
-                            whileHover={{ scale: 1.5 }}
+                            whileHover={{ scale: 3.0 }}
                             transition={transition}
                           />
                         )}

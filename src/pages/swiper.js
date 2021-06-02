@@ -167,6 +167,7 @@ function SwiperJS() {
         <button onClick={() => dispatch({ type: "NEXT" })}>›</button>
       </div>
     </div>
+
   );
 }
 

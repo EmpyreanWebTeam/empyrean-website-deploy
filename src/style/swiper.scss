@@ -28,6 +28,15 @@ body {
   align-items: center;
 }
 
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+
 .background {
   background-image: url("../images/throughTheDoors.png");
   background-size: cover;
@@ -40,8 +49,9 @@ body {
 }
 
 .slides {
-  margin-top: 15%;
+  margin-top: 24%;
   margin-left: 35%;
+  z-index: 2;
   display: grid;
   > .slide {
     grid-area: 1 / -1;
