@@ -1,5 +1,5 @@
 mainD {
-    background: #f3f4f6;
+    background: #18191a;
     grid-area: main;
     overflow-y: auto;
   }
@@ -102,11 +102,47 @@ mainD {
     padding: 15px;
   }
 
-  #charts_iframe {
+  .charts_iframe {
     padding: 25px;
     border-radius: 5px;
-    background: #ffffff;
+    background: #f1f1f1;;
     box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
+  }
+
+  .charts__iframe__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .charts__iframe__title > div > h1 {
+    font-size: 24px;
+    color: #2e4a66;
+    margin-bottom: 5px;
+  }
+  
+  .charts__iframe__title > div > p {
+    font-size: 14px;
+    font-weight: 700;
+    color: #a5aaad;
+  }
+  
+  .charts__iframe__title > i {
+    color: #ffffff;
+    font-size: 20px;
+    background: #39447a;
+    border-radius: 200px 0px 200px 200px;
+    -moz-border-radius: 200px 0px 200px 200px;
+    -webkit-border-radius: 200px 0px 200px 200px;
+    border: 0px solid #000000;
+    padding: 15px;
+  }
+  
+  .charts__iframe__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 30px;
   }
   
   .charts__right {

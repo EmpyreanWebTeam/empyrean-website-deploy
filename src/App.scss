@@ -78,7 +78,7 @@ body {
   background-image: "./images/ec-background.png";
   flex-grow: 1;
   margin: 0 auto;
-  padding: 0 32px;
+  // padding: 0 32px;
   position: relative;
   width: auto;
   height: 100%;
@@ -94,7 +94,7 @@ body {
     max-width: 1152px;
   }
   @media (min-width: 1408px) {
-    max-width: 1560px;
+    max-width: 1680px;
   }
 
   .row {
@@ -150,7 +150,7 @@ main {
       height: auto;
       align-items: center;
       .image-container {
-        position: relative;
+        // position: relative;
         width: 150%;
         .thumbnail {
           overflow: hidden;
@@ -160,7 +160,7 @@ main {
           .frame {
             img {
               width: 25%;
-              margin: -23% 37% 13% 37%;
+              margin: 12% 37% 13% 37%;
             }
           }
         }

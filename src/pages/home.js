@@ -3,21 +3,18 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import ProgressiveImage from "react-progressive-image";
 
-// Components
-import BackgroundVideo from "../components/backgroundVideo/backgroundVideo";
-
 
 // Images
 import gLeft from '../images/ecGateLeft.png';
 import gRight from '../images/ecGateRight.png';
-import inside from '../images/throughTheDoors.png';
 import swiperScreen from '../images/swiperScreen.png';
 
 // Style
 import "../style/doors.css";
 
 // Video
-import "../videos/lounge.mp4";
+import Lounge from "../videos/lounge.mp4";
+
 
 
 const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
@@ -38,16 +35,23 @@ const Home = ({ imageDetails, image }) => (
 
               <div className="wrapper">
                 <div className="gLeftandRight">
-                <div>
-                  <BackgroundVideo />
-                </div>
                   <div id="left-door" className="lDoor">
                     <img src={gLeft} className="gLeft" alt="leftDoor">
                     </img>
                   </div>
-                  {/* <div className="inside">
-                    <img src={inside} alt="inside" className="lounge"></img>
-                  </div> */}
+                  <video autoPlay loop muted
+                  style={{
+                    position: "absolute",
+                    width: "100%",
+                    left: "50%",
+                    top: "50%",
+                    height: "100%",
+                    objectFit: "cover",
+                    transform: "translate(-50%, -50%)",
+                    zIndex: "-1"
+                  }}>
+                  <source src={Lounge} type="video/mp4"/>
+                </video>
                 
                   <div className='frame'>
                     <Link to={`/swiper/empyrean`}>

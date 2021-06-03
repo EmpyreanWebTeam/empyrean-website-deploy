@@ -40,12 +40,12 @@ body {
 }
 
 .slides {
-  margin-top: 24%;
+  margin-top: 18%;
   margin-left: 35%;
   z-index: 2;
   display: grid;
   > .slide {
-    grid-area: 1 / -1;
+    grid-area: -1 / 1;
   }
 
   > button {
@@ -89,17 +89,6 @@ body {
 //        opacity: 1;
 //      }
 //    }
-// }
-
-// .slide {
-//   background-image: url("../images/throughTheDoors.png");
-//   background-size: cover;
-//   background-position: 50% 50%;
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
 // }
 
 .slideContent {
@@ -148,7 +137,7 @@ body {
 }
 
 .slideBackground {
-  background-image: url("../images/throughTheDoors.png");
+  // background-image: url("../images/throughTheDoors.png");
   position: fixed;
   top: 0;
   left: -10%;

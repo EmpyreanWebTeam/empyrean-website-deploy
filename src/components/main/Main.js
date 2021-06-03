@@ -76,17 +76,19 @@ const Main = () => {
             <Chart />
           </div>
 
-          <div className="charts_right">
-            <iframe id="charts_iframe" src="https://codepen.io/jon1969edwards/full/poepLbZ"
-                        width="450" 
-                        height="450"
-                        frameborder="0" 
-                        scrolling="no" 
-                        allowfullscreen="allowfullscreen">
+          <div className="charts_iframe">
+            <iframe 
+                    src="https://codepen.io/jon1969edwards/full/poepLbZ"
+                    title="My Avitar"
+                    width="450" 
+                    height="450"
+                    frameborder="0" 
+                    scrolling="no" 
+                    allowfullscreen="allowfullscreen">
 
             </iframe>
           </div>
-          {/* <div className="charts__right">
+          <div className="charts__right">
             <div className="charts__right__title">
               <div>
                 <h1>Stats Reports</h1>
@@ -116,7 +118,7 @@ const Main = () => {
                 <p>18,819,847</p>
               </div>
             </div>
-          </div> */}
+          </div>
         </div>
         {/* <!-- CHARTS ENDS HERE --> */}
       </div>
