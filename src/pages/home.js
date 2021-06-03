@@ -9,6 +9,9 @@ import gRight from '../images/ecGateRight.png';
 // import inside from '../images/swiperScreen.png';
 import swiperScreen from '../images/swiperScreen.png';
 
+//Pages
+import SwiperPage from "./swiper"
+
 // Style
 import "../style/doors.css";
 // import "../App.scss";
@@ -36,7 +39,7 @@ const Home = ({ imageDetails, image }) => (
                     </img>
                   </div>
                   <div className='frame'>
-                    <Link to={`/swiper/empyrean`}>
+                    <Link to={`/model/empyrean`}>
                       <ProgressiveImage
                         src={require("../images/swiperScreen.png")}
                         placeholder={require("../images/swiperScreen.png")}>
@@ -56,6 +59,16 @@ const Home = ({ imageDetails, image }) => (
                     <img src={gRight} className="gRight" alt="rightDoor">
                     </img>
                   </div>
+                  <motion.div
+                    exit={{ opacity: 0 }}
+                    transition={transition}
+                    className='information'>
+                    <div className='title'>Yasmeen Tariq</div>
+                    <div className='location'>
+                      <span>28.538336</span>
+                      <span>-81.379234</span>
+                    </div>
+                  </motion.div>
                 </div>
               </div>
             </div>

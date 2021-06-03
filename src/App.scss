@@ -31,13 +31,6 @@ body {
   }
 }
 
-// img {
-//   width: auto;
-//   height: 100%;
-//   object-fit: cover;
-// }
-
-
 @keyframes grain {
   0%,
   100% {
@@ -75,7 +68,6 @@ body {
 //Header
 
 .container {
-  background-image: "./images/ec-background.png";
   flex-grow: 1;
   margin: 0 auto;
   padding: 0 32px;
@@ -147,20 +139,16 @@ main {
   .container {
     position: relative;
     .row {
-      height: auto;
+      height: 100vh;
       align-items: center;
       .image-container {
         position: relative;
-        width: 150%;
         .thumbnail {
           overflow: hidden;
           position: relative;
-          padding-top: 2%;
-          padding-bottom: 2%;
           .frame {
             img {
-              width: 25%;
-              margin: 13% 37% 13% 37%;
+              width: 100%;
             }
           }
         }
@@ -185,10 +173,9 @@ main {
 
 //single
 .single {
-  display: flex;
   .container {
     .top-row {
-      height: 100%;
+      height: 50vh;
       width: 100%;
       align-items: flex-end;
       .top {
@@ -225,16 +212,16 @@ main {
       }
     }
     .bottom-row {
-      height: 100%;
+      height: 50vh;
       position: relative;
       .bottom {
-        // height: 100%;
+        height: 100%;
         width: 100%;
         .thumbnail-single {
           width: 100%;
-          height: 120px;
+          height: 800px;
           margin: 0 auto;
-          // overflow: hidden;
+          overflow: hidden;
           position: absolute;
           left: 0;
           right: 0;
@@ -242,8 +229,6 @@ main {
             img {
               position: absolute;
               width: 100%;
-              margin-left: 25%;
-              margin-right: 25%;
             }
           }
         }
