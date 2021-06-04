@@ -15,13 +15,13 @@ body {
 } */
 
 .wrapper {
-  /* height: 300px; */
+  height: 100%;
   width: 100%;
   /* border: 1px solid #f1c70c; */
   position: relative;
   margin: 0 auto;
   /* 3D */
-  perspective: 1000px;
+  perspective: 3000px;
   transform-style: preserve-3d;
 }
 
@@ -48,45 +48,16 @@ body {
   transition-delay: 0.2s;
   transition-timing-function: linear;
   border-radius: 10%;
-  animation: animateGlow 10s ease infinite;
   transition: transform 15s;
   transform: scale(1);
   margin: 0 auto;
-  box-shadow:
-  /* inner  */
-  inset 0 0 50px #fff,
-  /* inner left  short */
-  inset 20px 0 80px rgb(223, 212, 155),
-  /* inner right  short */
-  inset -20px 0 80px #0ff,
-  /* inner left  broad */
-  inset 20px 0 300px rgb(255, 123, 0),
-  /* inner right  broad */
-  inset -20px 0 300px rgb(223, 212, 155),
-  /* outer  */
-  0 0 50px #fff,
-  /* outer left  */
-  -10px 0 80px rgb(255, 253, 159),
-  /* outer right  */
-  10px 0 80px rgb(223, 212, 155);
 }
 
-@keyframes animateGlow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 
 /* Left Door */
 
 .lDoor {
-  background-color: #000;
+  /* background-color: #000; */
   height: 144%;
   width: 50%;
   position: absolute;
@@ -225,20 +196,13 @@ body {
 
 /* Door swing effect */
 .wrapper:hover #left-door{
-  transform: rotateY(125deg);
-}
-
-.wrapper:hover #right-door{
   transform: rotateY(-125deg);
 }
 
-.woodDoor {
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.wrapper:hover #right-door{
+  transform: rotateY(125deg);
 }
+
 
 .gLeft {
   height: 130%;
