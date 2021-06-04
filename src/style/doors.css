@@ -49,26 +49,26 @@ body {
   transition-timing-function: linear;
   border-radius: 10%;
   animation: animateGlow 10s ease infinite;
-  /* transition: transform 15s; */
-  /* transform: scale(2); */
+  transition: transform 15s;
+  transform: scale(1);
   margin: 0 auto;
-  /* box-shadow: */
+  box-shadow:
   /* inner  */
-  /* inset 0 0 50px #fff, */
+  inset 0 0 50px #fff,
   /* inner left  short */
-  /* inset 20px 0 80px rgb(223, 212, 155), */
+  inset 20px 0 80px rgb(223, 212, 155),
   /* inner right  short */
-  /* inset -20px 0 80px #0ff, */
+  inset -20px 0 80px #0ff,
   /* inner left  broad */
-  /* inset 20px 0 300px rgb(255, 123, 0), */
+  inset 20px 0 300px rgb(255, 123, 0),
   /* inner right  broad */
-  /* inset -20px 0 300px rgb(223, 212, 155), */
+  inset -20px 0 300px rgb(223, 212, 155),
   /* outer  */
-  /* 0 0 50px #fff, */
+  0 0 50px #fff,
   /* outer left  */
-  /* -10px 0 80px rgb(255, 253, 159), */
+  -10px 0 80px rgb(255, 253, 159),
   /* outer right  */
-  /* 10px 0 80px rgb(223, 212, 155); */
+  10px 0 80px rgb(223, 212, 155);
 }
 
 @keyframes animateGlow {
@@ -87,7 +87,7 @@ body {
 
 .lDoor {
   background-color: #000;
-  height: 100%;
+  height: 144%;
   width: 50%;
   position: absolute;
   z-index: 4;
@@ -146,7 +146,7 @@ body {
 
 .rDoor {
   background-color: #000;
-  height: 100%;
+  height: 144%;
   width: 50%;
   position: absolute;
   z-index: 4;
@@ -241,13 +241,13 @@ body {
 }
 
 .gLeft {
-  height: 237px;
+  height: 130%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   /* padding-left: 348px; */
-  margin-left: 497px;
+  margin-left: 450px;
 }
 
 .gLeft img {
@@ -258,13 +258,13 @@ body {
 }
 
 .gRight {
-  height: 237px;
+  height: 130%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   /* padding-right: 348px; */
-  margin-right: 497px;
+  margin-right: 450px;
 }
 
 .gRight img {

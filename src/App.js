@@ -13,7 +13,7 @@ import './App.scss';
 import Home from './pages/home';
 import Model from './pages/model';
 import Dashboard from "./pages/dashboard";
-import SwiperJS from "./pages/swiper";
+import SwiperJS from "./pages/home";
 
 
 function App() {

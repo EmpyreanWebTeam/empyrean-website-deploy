@@ -5,7 +5,7 @@ mainD {
   }
   
   .main__container {
-    padding: 20px 146px;
+    padding: 20px 0px;
   }
   
   .main__title {
@@ -105,7 +105,7 @@ mainD {
   .charts_iframe {
     padding: 25px;
     border-radius: 5px;
-    background: #f1f1f1;;
+    background: #f1f1f1;
     box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
   }
 
@@ -226,6 +226,12 @@ mainD {
   
   @media only screen and (max-width: 855px) {
     .main__cards {
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-bottom: 0;
+    }
+
+    .charts_iframe {
       grid-template-columns: 1fr;
       gap: 10px;
       margin-bottom: 0;
