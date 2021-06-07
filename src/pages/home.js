@@ -170,8 +170,8 @@ function Home({ imageDetails, image }) {
               className='thumbnail'
               ref={image}
               style={{
-                width: "1677px",
-                height: "937px",
+                width: imageDetails.width,
+                height: imageDetails.height,
               }}>
 
               <div className="wrapper">
