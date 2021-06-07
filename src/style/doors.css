@@ -38,7 +38,7 @@ body {
 }
 
 .gLeftandRight {
-  height: 650px;
+  height: 100%;
   transition: .50s all;   
   transition-delay: 2.4s;
 }
