@@ -209,7 +209,7 @@ body {
 
 
 .gLeft {
-  height: 99%;
+  height: 92%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -226,7 +226,7 @@ body {
 }
 
 .gRight {
-  height: 99%;
+  height: 92%;
   display: flex;
   flex-direction: column;
   justify-content: center;

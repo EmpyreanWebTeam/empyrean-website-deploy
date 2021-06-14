@@ -18,8 +18,8 @@ import SwiperJS from "./pages/home";
 
 function App() {
   const imageDetails = {
-    width: 1200,
-    height: 650,
+    width: 1843,
+    height: 931,
   };
 
   return (

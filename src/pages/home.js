@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { useMediaQuery } from 'react-responsive'
 
 
 // Images
@@ -17,7 +17,7 @@ console.clear();
 
 const slides = [
   {
-    title: "My Dashboard",
+    title: "My Dashboard 0",
     subtitle: "subtitle",
     description: "description",
     link: "/dashboard",
@@ -25,7 +25,7 @@ const slides = [
       "https://jonedwards.tech/img/empyrean/gameStats/gameDashboard1.png"
   },
   {
-    title: "My Stats",
+    title: "My Stats -1",
     subtitle: "subtitle",
     description: "description",
     link: "/dashboard",
@@ -33,28 +33,12 @@ const slides = [
       "https://jonedwards.tech/img/empyrean/gameStats/gameDashboard2.png"
   },
   {
-    title: "Title",
+    title: "Title -2",
     subtitle: "subtitle",
     description: "description",
     link: "/dashboard",
     image:
       "https://jonedwards.tech/img/empyrean/gameStats/gameDashboard3.png"
-  },
-  {
-    title: "My Money",
-    subtitle: "subtitle",
-    description: "description",
-    link: "/dashboard",
-    image:
-      "https://jonedwards.tech/img/empyrean/gameStats/gameDashboard4.png"
-  },
-  {
-    title: "My Games",
-    subtitle: "subtitle",
-    description: "description",
-    link: "/dashboard",
-    image:
-      "https://jonedwards.tech/img/empyrean/gameStats/gameDashboard5.png"
   }
 ];
 
@@ -159,18 +143,116 @@ function Slide({ slide, offset }) {
   );
 }
 
+
 function Home({ imageDetails, image }) {
+  const Desktop = ({ children }) => {
+    const isDesktop = useMediaQuery({ minWidth: 992 })
+    return isDesktop ? children : null
+  }
+  const Tablet = ({ children }) => {
+    const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 })
+    return isTablet ? children : null
+  }
+  const Mobile = ({ children }) => {
+    const isMobile = useMediaQuery({ maxWidth: 767 })
+    return isMobile ? children : null
+  }
+  const Default = ({ children }) => {
+    const isNotMobile = useMediaQuery({ minWidth: 768 })
+    return isNotMobile ? children : null
+  }
   const [state, dispatch] = React.useReducer(slidesReducer, initialState);
 
   return (
     <div className='container'>
+
+      <Default>
+      <div className="wrapper">
+                <div className="gLeftandRight">
+                  <div id="left-door" 
+                       className="lDoor"
+                       style={{
+                        height: "100%",
+                        width: "54%",
+                        position: "absolute",
+                        zIndex: "4",
+                        top: "0",
+                        left: "0",
+                        marginLeft: "-40px",
+                        marginTop: "-20px",
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "space-around",
+                        alignItems: "center",
+                        transition: "250ms linear",
+                        transformStyle: "preserve-3d"
+                       }}
+                       >
+                    <img src={gLeft} 
+                         className="gLeft" 
+                         alt="leftDoor"
+                         style={{
+                          marginLeft: "62%",
+                          height: "69%",
+                          display: "flex",
+                          flexDirection: "column",
+                          justifyContent: "center",
+                          alignItems: "center"
+                        }}
+                         >
+                    </img>
+                  </div>
+                  <div className="background">
+                    <video autoPlay loop muted
+                      style={{
+                        position: "absolute",
+                        width: "104%",
+                        left: "50%",
+                        top: "48%",
+                        height: "130%",
+                        objectFit: "cover",
+                        transform: "translate(-50%, -50%)",
+                        zIndex: "-1"
+                      }}>
+                      <source src={Lounge} type="video/mp4"/>
+                    </video>
+                    <div className="slides">
+                      <button onClick={() => dispatch({ type: "PREV" })}>‹</button>
+
+                      {[...slides, ...slides, ...slides].map((slide, i) => {
+                        let offset = slides.length + (state.slideIndex - i);
+                        return <Slide slide={slide} offset={offset} key={i} />;
+                      })}
+                      <button onClick={() => dispatch({ type: "NEXT" })}>›</button>
+                    </div>
+                  </div>
+                  <div id="right-door" className="rDoor">
+                    <img src={gRight} 
+                         className="gRight" 
+                         alt="rightDoor"
+                         style={{
+                           marginRight: "62%",
+                           height: "69%",
+                           display: "flex",
+                           flexDirection: "column",
+                           justifyContent: "center",
+                           alignItems: "center"
+                         }}
+                         >
+                    </img>
+                  </div>
+                </div>
+              </div>
+      </Default>
+
+      <Desktop>
         <div className='row center'>
           <div className='image-container'>
             <div
               className='thumbnail'
               ref={image}
               style={{
-                width: imageDetails.width,
+                minWidth: imageDetails.width,
                 height: imageDetails.height,
               }}>
 
@@ -184,10 +266,10 @@ function Home({ imageDetails, image }) {
                     <video autoPlay loop muted
                       style={{
                         position: "absolute",
-                        width: "100%",
+                        width: "104%",
                         left: "50%",
-                        top: "49%",
-                        height: "100%",
+                        top: "48%",
+                        height: "130%",
                         objectFit: "cover",
                         transform: "translate(-50%, -50%)",
                         zIndex: "-1"
@@ -213,9 +295,75 @@ function Home({ imageDetails, image }) {
             </div>
           </div>
         </div>
+        </Desktop>
+
+        <Tablet>
+        <div className="background">
+              <video autoPlay loop muted
+                style={{
+                  position: "absolute",
+                  width: "160%",
+                  left: "50%",
+                  top: "35%",
+                  height: "65%",
+                  objectFit: "cover",
+                  transform: "translate(-50%, -50%)",
+                  zIndex: "-1"
+                }}>
+                <source src={Lounge} type="video/mp4"/>
+              </video>
+              <div className="slides"
+                   style={{
+                    marginTop: "50%",
+                    marginLeft: "34%",
+                   }}>
+                <button onClick={() => dispatch({ type: "PREV" })}>‹</button>
+
+                {[...slides, ...slides, ...slides].map((slide, i) => {
+                  let offset = slides.length + (state.slideIndex - i);
+                  return <Slide slide={slide} offset={offset} key={i} />;
+                })}
+                <button onClick={() => dispatch({ type: "NEXT" })}>›</button>
+              </div>
+            </div>         
+        </Tablet>
+
+        <Mobile>
+            <div className="background">
+              <video autoPlay loop muted
+                style={{
+                  position: "absolute",
+                  width: "160%",
+                  left: "50%",
+                  top: "35%",
+                  height: "65%",
+                  objectFit: "cover",
+                  transform: "translate(-50%, -50%)",
+                  zIndex: "-1"
+                }}>
+                <source src={Lounge} type="video/mp4"/>
+              </video>
+              <div className="slides"
+                   style={{
+                    marginTop: "65%",
+                    marginLeft: "34%",
+                   }}>
+                <button onClick={() => dispatch({ type: "PREV" })}>‹</button>
+
+                {[...slides, ...slides, ...slides].map((slide, i) => {
+                  let offset = slides.length + (state.slideIndex - i);
+                  return <Slide slide={slide} offset={offset} key={i} />;
+                })}
+                <button onClick={() => dispatch({ type: "NEXT" })}>›</button>
+              </div>
+            </div>
+        </Mobile>
       </div>
 
   );
 }
+
+
+
 
 export default Home;

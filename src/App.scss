@@ -87,15 +87,15 @@ body {
     max-width: 100%;
     padding: 0;
   }
-  @media (min-width: 1024px) {
-    max-width: 960px;
-  }
-  @media (min-width: 1250px) {
-    max-width: 1300px;
-  }
-  @media (min-width: 1408px) {
-    max-width: 1680px;
-  }
+  // @media (min-width: 1024px) {
+  //   max-width: 960px;
+  // }
+  // @media (min-width: 1250px) {
+  //   max-width: 1300px;
+  // }
+  // @media (min-width: 1408px) {
+  //   max-width: 1680px;
+  // }
 
   .row {
     display: flex;
@@ -164,6 +164,10 @@ main {
             }
           }
         }
+
+        // width: 1843px;
+        // height: 931px;
+
         .information {
           position: absolute;
           width: 100%;
