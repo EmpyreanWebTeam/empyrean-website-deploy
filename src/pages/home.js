@@ -146,8 +146,12 @@ function Slide({ slide, offset }) {
 
 function Home({ imageDetails, image }) {
   const Desktop = ({ children }) => {
-    const isDesktop = useMediaQuery({ minWidth: 992 })
+    const isDesktop = useMediaQuery({ minWidth: 1550 })
     return isDesktop ? children : null
+  }
+  const Laptop = ({ children }) => {
+    const isLaptop = useMediaQuery({ minWidth: 768, maxWidth: 1549 })
+    return isLaptop ? children : null
   }
   const Tablet = ({ children }) => {
     const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 })
@@ -166,28 +170,18 @@ function Home({ imageDetails, image }) {
   return (
     <div className='container'>
 
-      <Default>
-      <div className="wrapper">
+      <Laptop>
+      <div className='row center'>
+        <div className='image-container'>
+        <div className='thumbnail'
+             ref={image}
+             style={{
+               width: imageDetails.width,
+               height: imageDetails.height,
+             }}>
+          <div className="wrapper">
                 <div className="gLeftandRight">
-                  <div id="left-door" 
-                       className="lDoor"
-                       style={{
-                        height: "100%",
-                        width: "54%",
-                        position: "absolute",
-                        zIndex: "4",
-                        top: "0",
-                        left: "0",
-                        marginLeft: "-40px",
-                        marginTop: "-20px",
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "space-around",
-                        alignItems: "center",
-                        transition: "250ms linear",
-                        transformStyle: "preserve-3d"
-                       }}
-                       >
+                  <div id="left-door" className="lDoor">
                     <img src={gLeft} 
                          className="gLeft" 
                          alt="leftDoor"
@@ -198,8 +192,7 @@ function Home({ imageDetails, image }) {
                           flexDirection: "column",
                           justifyContent: "center",
                           alignItems: "center"
-                        }}
-                         >
+                        }}>
                     </img>
                   </div>
                   <div className="background">
@@ -243,7 +236,10 @@ function Home({ imageDetails, image }) {
                   </div>
                 </div>
               </div>
-      </Default>
+              </div>
+            </div>
+          </div>
+      </Laptop>
 
       <Desktop>
         <div className='row center'>
@@ -252,7 +248,7 @@ function Home({ imageDetails, image }) {
               className='thumbnail'
               ref={image}
               style={{
-                minWidth: imageDetails.width,
+                width: imageDetails.width,
                 height: imageDetails.height,
               }}>
 
