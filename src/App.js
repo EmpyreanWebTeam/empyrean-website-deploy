@@ -13,7 +13,6 @@ import './App.scss';
 import Home from './pages/home';
 import Model from './pages/model';
 import Dashboard from "./pages/dashboard";
-import SwiperJS from "./pages/home";
 
 
 function App() {
@@ -32,11 +31,6 @@ function App() {
                 exact
                 path='/'
                 render={() => <Home imageDetails={imageDetails} />}
-              />
-              <Route
-                exact
-                path='/swiper/:id'
-                render={() => <SwiperJS imageDetails={imageDetails} />}
               />
               <Route
                 exact
