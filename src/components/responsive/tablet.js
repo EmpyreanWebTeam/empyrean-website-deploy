@@ -1,33 +1,27 @@
 import React from "react";
 import { useMediaQuery } from 'react-responsive'
 
-//Components
 import Slides from './slides'
 
-//Video
 import Lounge from "../../videos/lounge.mp4";
 
-//Style
 import "../../style/swiper.scss";
 
-function Desktop() {
-    const Desktop = ({ children }) => {
-        const isDesktop = useMediaQuery({ minWidth: 1550 })
-        return isDesktop ? children : null
+function Tablet() {
+    const Tablet = ({ children }) => {
+        const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 })
+        return isTablet ? children : null
       }
         return (
-          <Desktop>
-            <div className="background"
-                 style={{
-                   height: "115%",
-                 }}>
+          <Tablet>
+            <div className="background">
               <video autoPlay loop muted
                 style={{
                   position: "absolute",
                   width: "100%",  
                   left: "50%",
                   top: "48%",
-                  height: "96%",
+                  height: "85%",
                   objectFit: "cover",
                   transform: "translate(-50%, -50%)",
                   zIndex: "-1"
@@ -36,8 +30,8 @@ function Desktop() {
               </video>
               <Slides />
             </div>
-          </Desktop>
+          </Tablet>
     )
 }
 
-export default Desktop;
+export default Tablet;

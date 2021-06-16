@@ -36,7 +36,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 144%;
+  height: 90%;
 }
 
 .slides {
@@ -76,6 +76,17 @@ body {
     &:last-child {
       right: 40%;
     }
+
+    @media only screen and (max-width: 767px) {
+      font-size: 15rem;
+    }
+    @media only screen and (max-width: 855px) {
+      font-size: 10rem;
+    }
+  }
+  @media only screen and (max-width: 855px) {
+    margin-top: 65%;
+    margin-left: 34%;
   }
 }
 
@@ -92,6 +103,31 @@ body {
 // }
 
 .slideContent {
+  width: 30vw;
+  height: 15vw;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease-in-out;
+  opacity: 0.7;
+
+  display: grid;
+  align-content: center;
+
+  transform-style: preserve-3d;
+  transform: perspective(1000px) translateX(calc(100% * var(--offset)))
+    rotateY(calc(-45deg * var(--dir)));
+}
+
+.slideIframe {
+  padding: 25px;
+  border-radius: 5px;
+  background: #f1f1f1;
+  src: "https://codepen.io/jon1969edwards/full/poepLbZ";
+  // box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
+}
+
+.slideContentIframe {
   width: 30vw;
   height: 15vw;
   background-size: cover;

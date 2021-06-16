@@ -15,6 +15,7 @@ import Model from './pages/model';
 import Dashboard from "./pages/dashboard";
 
 
+
 function App() {
   const imageDetails = {
     width: 1843,
@@ -30,6 +31,7 @@ function App() {
               <Route
                 exact
                 path='/'
+                component={Home}
                 render={() => <Home imageDetails={imageDetails} />}
               />
               <Route
