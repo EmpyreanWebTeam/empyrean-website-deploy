@@ -21,6 +21,8 @@ const slides = [
     subtitle: "subtitle",
     description: "description",
     link: "/dashboard",
+    iframe: 
+      "",
     image:
       "https://jonedwards.tech/img/empyrean/gameStats/gameDashboard2.png"
   },
@@ -29,6 +31,8 @@ const slides = [
     subtitle: "subtitle",
     description: "description",
     link: "/dashboard",
+    iframe: 
+      "",
     image:
       "https://jonedwards.tech/img/empyrean/gameStats/gameDashboard3.png"
   }
@@ -138,9 +142,10 @@ function Slide({ slide, offset }) {
                     title="My Avitar"
                     width="30vw" 
                     height="15vw"
-                    frameborder="0" 
+                    frameBorder="0" 
                     scrolling="no" 
-                    allowfullscreen="allowfullscreen">{slide.iframe}
+                    allowFullScreen="allowFullScreen"
+                    allowTransparency="true">{slide.iframe}
             </iframe>
             <p className="slideDescription">{slide.description}</p>
           </div>
