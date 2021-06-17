@@ -22,7 +22,7 @@ const slides = [
     description: "description",
     link: "/dashboard",
     iframe: 
-      "",
+      "https://codepen.io/kylewetton/full/jONpxpa",
     image:
       "https://jonedwards.tech/img/empyrean/gameStats/gameDashboard2.png"
   },
@@ -145,7 +145,7 @@ function Slide({ slide, offset }) {
                     frameBorder="0" 
                     scrolling="no" 
                     allowFullScreen="allowFullScreen"
-                    allowTransparency="true">{slide.iframe}
+                    allowTransparency="true">
             </iframe>
             <p className="slideDescription">{slide.description}</p>
           </div>

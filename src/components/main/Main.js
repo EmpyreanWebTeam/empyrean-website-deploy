@@ -64,17 +64,6 @@ const Main = () => {
         {/* <!-- MAIN CARDS ENDS HERE --> */}
 
         {/* <!-- CHARTS STARTS HERE --> */}
-        <div className="charts">
-          <div className="charts__left">
-            <div className="charts__left__title">
-              <div>
-                <h1>Kill Stats</h1>
-                <p>California, USA</p>
-              </div>
-              <i className="fa fa-usd" aria-hidden="true"></i>
-            </div>
-            <Chart />
-          </div>
 
           <div className="charts_iframe">
             <iframe 
@@ -88,6 +77,31 @@ const Main = () => {
 
             </iframe>
           </div>
+          <div className="charts_iframe">
+            <iframe 
+                    src="https://codepen.io/kylewetton/full/jONpxpa"
+                    title="My Avitar"
+                    width="450" 
+                    height="450"
+                    frameborder="0" 
+                    scrolling="no" 
+                    allowfullscreen="allowfullscreen">
+
+            </iframe>
+          </div>
+          
+          <div className="charts">
+          <div className="charts__left">
+            <div className="charts__left__title">
+              <div>
+                <h1>Kill Stats</h1>
+                <p>California, USA</p>
+              </div>
+              <i className="fa fa-usd" aria-hidden="true"></i>
+            </div>
+            <Chart />
+          </div>
+          
           <div className="charts__right">
             <div className="charts__right__title">
               <div>
