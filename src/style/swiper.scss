@@ -41,7 +41,7 @@ body {
 
 .slides {
   margin-top: 18%;
-  margin-left: 37%;
+  margin-left: 22%;
   z-index: 2;
   display: grid;
   > .slide {
@@ -71,10 +71,10 @@ body {
     }
 
     &:first-child {
-      left: -16%;
+      left: -10%;
     }
     &:last-child {
-      right: 40%;
+      right: 20%;
     }
 
     @media only screen and (max-width: 767px) {
@@ -103,8 +103,8 @@ body {
 // }
 
 .slideContent {
-  width: 30vw;
-  height: 15vw;
+  width: 54vw;
+  height: 29vw;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -123,27 +123,33 @@ body {
   border-radius: 5px;
   background: #f1f1f1;
   // box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
-  width: 13vw;
-  height: 10vw;
-  margin-left: 53%;
-  margin-top: 1%;
+  width: 21vw;
+  height: 18vw;
+  margin-left: 62%;
+  margin-right: 0px;
+  margin-bottom: -118px;
+  margin-top: 11%;
+  padding-right: 0px;
+  padding-left: 1px;
+  border-bottom-width: 0px;
+  border-bottom-style: solid;
+  border-top-width: 0px;
+  border-top-style: solid;
 }
 
 .slideContentIframe {
-  width: 30vw;
+  width: 0px;
   height: 15vw;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   transition: transform 0.5s ease-in-out;
-  opacity: 0.7;
 
   display: grid;
   align-content: center;
 
   transform-style: preserve-3d;
-  transform: perspective(1000px) translateX(calc(100% * var(--offset)))
-    rotateY(calc(-45deg * var(--dir)));
+  
 }
 
 .slideContentInner {

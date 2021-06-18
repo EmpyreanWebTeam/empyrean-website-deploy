@@ -138,6 +138,7 @@ function Slide({ slide, offset }) {
             <h2 className="slideTitle">{slide.title}</h2>
             <h3 className="slideSubtitle">{slide.subtitle}</h3>
             <iframe className="slideIframe"
+                    background="transparent"
                     src={slide.iframe}
                     title="My Avitar"
                     width="30vw" 
