@@ -29,7 +29,7 @@ body {
 }
 
 .background {
-  // background-image: url("../images/throughTheDoors.png");
+  background-image: url("../images/throughTheDoors.png");
   background-size: cover;
   background-position: 50% 50%;
   position: fixed;
@@ -121,7 +121,8 @@ body {
 
 .slideIframe {
   border-radius: 5px;
-  background: #f1f1f1;
+  background: transparent;
+  opacity: 0.5;
   // box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
   width: 21vw;
   height: 18vw;

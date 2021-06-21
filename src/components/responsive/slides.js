@@ -12,7 +12,7 @@ const slides = [
     description: "description",
     link: "/dashboard",
     iframe: 
-      "https://codepen.io/jon1969edwards/full/poepLbZ",
+      "https://empyreanwebteam.github.io/empyrean-3d-iframe.github.io/avatar.html",
     image:
       "https://jonedwards.tech/img/empyrean/gameStats/gameDashboard1.png"
   },
@@ -22,7 +22,7 @@ const slides = [
     description: "description",
     link: "/dashboard",
     iframe: 
-      "https://codepen.io/kylewetton/full/jONpxpa",
+      "https://empyreanwebteam.github.io/empyrean-3d-iframe.github.io/chair.html",
     image:
       "https://jonedwards.tech/img/empyrean/gameStats/gameDashboard2.png"
   },
@@ -32,7 +32,7 @@ const slides = [
     description: "description",
     link: "/dashboard",
     iframe: 
-      "",
+      "https://baetes.com/embed?id=SolarDrive1&animation=spin",
     image:
       "https://jonedwards.tech/img/empyrean/gameStats/gameDashboard3.png"
   }
@@ -138,7 +138,7 @@ function Slide({ slide, offset }) {
             <h2 className="slideTitle">{slide.title}</h2>
             <h3 className="slideSubtitle">{slide.subtitle}</h3>
             <iframe className="slideIframe"
-                    background="transparent"
+                    backgroundColor="transparent"
                     src={slide.iframe}
                     title="My Avitar"
                     width="30vw" 

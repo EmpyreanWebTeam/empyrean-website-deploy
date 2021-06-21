@@ -6,6 +6,7 @@ import Slides from './slides'
 import Lounge from "../../videos/lounge.mp4";
 
 import "../../style/swiper.scss";
+import { Height } from "@material-ui/icons";
 
 function Laptop() {
     const Laptop = ({ children }) => {
@@ -14,8 +15,11 @@ function Laptop() {
       }
         return (
           <Laptop>
-            <div className="background">
-              <video autoPlay loop muted
+            <div className="background"
+                 style={{
+                  width: "100vw",
+                  Height: "63vw"}}>
+              {/* <video autoPlay loop muted
                 style={{
                   position: "absolute",
                   width: "100%",  
@@ -27,7 +31,7 @@ function Laptop() {
                   zIndex: "-1"
                 }}>
                 <source src={Lounge} type="video/mp4"/>
-              </video>
+              </video> */}
               <Slides />
             </div>
           </Laptop>

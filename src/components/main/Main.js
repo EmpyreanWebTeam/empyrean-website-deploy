@@ -67,7 +67,7 @@ const Main = () => {
 
           <div className="charts_iframe">
             <iframe 
-                    src="https://codepen.io/jon1969edwards/full/poepLbZ"
+                    src="https://cdpn.io/jon1969edwards/debug/poepLbZ/gaMeYdDRyoOM"
                     title="My Avitar"
                     width="450" 
                     height="450"
@@ -79,7 +79,7 @@ const Main = () => {
           </div>
           <div className="charts_iframe">
             <iframe 
-                    src="https://codepen.io/kylewetton/full/jONpxpa"
+                    src="https://cdpn.io/jon1969edwards/debug/MWpxOdZ/PBkNWRwgyyKM"
                     title="My Avitar"
                     width="450" 
                     height="450"

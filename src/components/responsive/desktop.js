@@ -5,7 +5,7 @@ import { useMediaQuery } from 'react-responsive'
 import Slides from './slides'
 
 //Video
-import Lounge from "../../videos/lounge.mp4";
+// import Lounge from "../../videos/lounge.mp4";
 
 //Style
 import "../../style/swiper.scss";
@@ -21,7 +21,7 @@ function Desktop() {
                  style={{
                    height: "115%",
                  }}>
-              <video autoPlay loop muted
+              {/* <video autoPlay loop muted
                 style={{
                   position: "absolute",
                   width: "100%",  
@@ -33,7 +33,7 @@ function Desktop() {
                   zIndex: "-1"
                 }}>
                 <source src={Lounge} type="video/mp4"/>
-              </video>
+              </video> */}
               <Slides />
             </div>
           </Desktop>

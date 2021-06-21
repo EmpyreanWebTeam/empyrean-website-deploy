@@ -3,7 +3,7 @@ import Laptop from "../components/responsive/laptop";
 import Desktop from "../components/responsive/desktop";
 import Tablet from "../components/responsive/tablet";
 import Mobile from "../components/responsive/mobile";
-import Doors from "../components/responsive/doors";
+// import Doors from "../components/responsive/doors";
 import { useMediaQuery } from 'react-responsive';
 
  
