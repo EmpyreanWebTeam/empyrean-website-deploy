@@ -3,7 +3,7 @@ import { useMediaQuery } from 'react-responsive'
 
 import Slides from './slides'
 
-import Lounge from "../../videos/lounge.mp4";
+// import Lounge from "../../videos/lounge.mp4";
 
 import "../../style/swiper.scss";
 import { Height } from "@material-ui/icons";

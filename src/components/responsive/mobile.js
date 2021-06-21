@@ -3,7 +3,7 @@ import { useMediaQuery } from 'react-responsive'
 
 import Slides from './slides'
 
-import Lounge from "../../videos/lounge.mp4";
+// import Lounge from "../../videos/lounge.mp4";
 
 import "../../style/swiper.scss";
 
@@ -15,7 +15,7 @@ function Mobile() {
         return (
           <Mobile>
             <div className="background">
-              <video autoPlay loop muted
+              {/* <video autoPlay loop muted
                 style={{
                   position: "absolute",
                   width: "100%",  
@@ -27,7 +27,7 @@ function Mobile() {
                   zIndex: "-1"
                 }}>
                 <source src={Lounge} type="video/mp4"/>
-              </video>
+              </video> */}
                 <Slides />
             </div>
           </Mobile>
