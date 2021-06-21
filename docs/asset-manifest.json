@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/empyrean-website-deploy.github.io/static/css/main.63f17faf.chunk.css",
+    "main.js": "/empyrean-website-deploy.github.io/static/js/main.dd00fecc.chunk.js",
+    "main.js.map": "/empyrean-website-deploy.github.io/static/js/main.dd00fecc.chunk.js.map",
+    "runtime-main.js": "/empyrean-website-deploy.github.io/static/js/runtime-main.34f4368a.js",
+    "runtime-main.js.map": "/empyrean-website-deploy.github.io/static/js/runtime-main.34f4368a.js.map",
+    "static/css/2.adc6f56e.chunk.css": "/empyrean-website-deploy.github.io/static/css/2.adc6f56e.chunk.css",
+    "static/js/2.cb0bbf84.chunk.js": "/empyrean-website-deploy.github.io/static/js/2.cb0bbf84.chunk.js",
+    "static/js/2.cb0bbf84.chunk.js.map": "/empyrean-website-deploy.github.io/static/js/2.cb0bbf84.chunk.js.map",
+    "static/js/3.c31a1234.chunk.js": "/empyrean-website-deploy.github.io/static/js/3.c31a1234.chunk.js",
+    "static/js/3.c31a1234.chunk.js.map": "/empyrean-website-deploy.github.io/static/js/3.c31a1234.chunk.js.map",
+    "index.html": "/empyrean-website-deploy.github.io/index.html",
+    "static/css/2.adc6f56e.chunk.css.map": "/empyrean-website-deploy.github.io/static/css/2.adc6f56e.chunk.css.map",
+    "static/css/main.63f17faf.chunk.css.map": "/empyrean-website-deploy.github.io/static/css/main.63f17faf.chunk.css.map",
+    "static/js/2.cb0bbf84.chunk.js.LICENSE.txt": "/empyrean-website-deploy.github.io/static/js/2.cb0bbf84.chunk.js.LICENSE.txt",
+    "static/media/avatar.1a84bdf0.svg": "/empyrean-website-deploy.github.io/static/media/avatar.1a84bdf0.svg",
+    "static/media/ecGateNoBorder.5c5f0655.png": "/empyrean-website-deploy.github.io/static/media/ecGateNoBorder.5c5f0655.png",
+    "static/media/gameDashboard1.024bbdc5.png": "/empyrean-website-deploy.github.io/static/media/gameDashboard1.024bbdc5.png",
+    "static/media/hello.4a9307f4.svg": "/empyrean-website-deploy.github.io/static/media/hello.4a9307f4.svg",
+    "static/media/swiper.scss": "/empyrean-website-deploy.github.io/static/media/throughTheDoors.60a6f73a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.34f4368a.js",
+    "static/css/2.adc6f56e.chunk.css",
+    "static/js/2.cb0bbf84.chunk.js",
+    "static/css/main.63f17faf.chunk.css",
+    "static/js/main.dd00fecc.chunk.js"
+  ]
+}
