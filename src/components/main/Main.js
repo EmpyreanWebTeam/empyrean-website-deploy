@@ -67,7 +67,7 @@ const Main = () => {
 
           <div className="charts_iframe">
             <iframe 
-                    src="https://cdpn.io/jon1969edwards/debug/poepLbZ/gaMeYdDRyoOM"
+                    src="https://empyreanwebteam.github.io/empyrean-3d-iframe.github.io/avatar.html"
                     title="My Avitar"
                     width="450" 
                     height="450"

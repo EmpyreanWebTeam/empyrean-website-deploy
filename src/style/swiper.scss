@@ -29,21 +29,30 @@ body {
 }
 
 .background {
-  background-image: url("../images/throughTheDoors.png");
+  background-image: url("../images/speakeasyRoom.png");
   background-size: cover;
   background-position: 50% 50%;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 90%;
+  height: 100%;
+  z-index: 1;
+}
+
+.slider {
+  top: 61px;
 }
 
 .slides {
-  margin-top: 18%;
-  margin-left: 22%;
+  margin-top: 0%;
+  margin-left: 18%;
+  width: 64%;
   z-index: 2;
   display: grid;
+  align-items: center;
+  padding: 5% 5% 5% 5%;
+  top: 95px;
   > .slide {
     grid-area: -1 / 1;
   }
@@ -71,10 +80,12 @@ body {
     }
 
     &:first-child {
-      left: -10%;
+      left: 38%;
+      top: 81%;
     }
     &:last-child {
-      right: 20%;
+      right: 38%;
+      top: 81%;
     }
 
     @media only screen and (max-width: 767px) {
@@ -87,6 +98,112 @@ body {
   @media only screen and (max-width: 855px) {
     margin-top: 65%;
     margin-left: 34%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+
+  .slider {
+    top: 18px;
+  }
+
+  .slides {
+    margin-top: 0%;
+    margin-left: 18%;
+    width: 64%;
+    z-index: 2;
+    display: grid;
+    align-items: center;
+    padding: 5% 5% 5% 5%;
+    top: 95px;
+    > .slide {
+      grid-area: -1 / 1;
+    }
+
+    > button {
+      appearance: none;
+      background: transparent;
+      border: none;
+      color: white;
+      position: absolute;
+      font-size: 5rem;
+      width: 5rem;
+      height: 5rem;
+      top: 30%;
+      transition: opacity 0.3s;
+      opacity: 0.7;
+      z-index: 5;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &:first-child {
+        left: 38%;
+        top: 71%;
+      }
+      &:last-child {
+        right: 38%;
+        top: 71%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1600px) {
+
+  .slider {
+    top: 61px;
+  }
+
+  .slides {
+    margin-top: 0%;
+    margin-left: 18%;
+    width: 64%;
+    z-index: 2;
+    display: grid;
+    align-items: center;
+    padding: 5% 5% 5% 5%;
+    top: 95px;
+    > .slide {
+      grid-area: -1 / 1;
+    }
+
+    > button {
+      appearance: none;
+      background: transparent;
+      border: none;
+      color: white;
+      position: absolute;
+      font-size: 5rem;
+      width: 5rem;
+      height: 5rem;
+      top: 30%;
+      transition: opacity 0.3s;
+      opacity: 0.7;
+      z-index: 5;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &:first-child {
+        left: 38%;
+        top: 75%;
+      }
+      &:last-child {
+        right: 38%;
+        top: 75%;
+      }
+    }
   }
 }
 
@@ -103,39 +220,39 @@ body {
 // }
 
 .slideContent {
+  // background-image: url("../images/ECsquare.png");
   width: 54vw;
-  height: 29vw;
+  height: 40vw;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   transition: transform 0.5s ease-in-out;
-  opacity: 0.7;
+  opacity: 1.7;
 
   display: grid;
   align-content: center;
 
   transform-style: preserve-3d;
-  transform: perspective(1000px) translateX(calc(100% * var(--offset)))
+  transform: perspective(1000px) translateX(calc(100% * var(--offset))) 
     rotateY(calc(-45deg * var(--dir)));
+  // transform: perspective(1000px) translateX(calc(115% * var(--offset)))
+  //   rotateY(calc(-35deg * var(--dir)));
 }
 
 .slideIframe {
   border-radius: 5px;
   background: transparent;
-  opacity: 0.5;
-  // box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
   width: 21vw;
-  height: 18vw;
-  margin-left: 62%;
-  margin-right: 0px;
-  margin-bottom: -118px;
-  margin-top: 11%;
+  height: 27vw;
+  margin-top: -53%;
   padding-right: 0px;
   padding-left: 1px;
   border-bottom-width: 0px;
   border-bottom-style: solid;
   border-top-width: 0px;
   border-top-style: solid;
+  left: 26vw;
+  bottom: 4vw;
 }
 
 .slideContentIframe {
@@ -147,39 +264,207 @@ body {
   transition: transform 0.5s ease-in-out;
 
   display: grid;
-  align-content: center;
 
   transform-style: preserve-3d;
   
 }
 
-.slideContentInner {
-  transform-style: preserve-3d;
-  transform: translateZ(2rem);
-  transition: opacity 0.3s linear;
-  text-shadow: 0 0.1rem 1rem #000;
-  opacity: 0;
-  color: lightseagreen;
+  .slideContentInner {
+    transform-style: preserve-3d;
+    transform: translateZ(2rem);
+    transition: opacity 0.3s linear;
+    text-shadow: 0 0.1rem 1rem white;
+    opacity: 0;
+    color: #97eae5;
+    padding-left: 65px;
+    text-align: justify;
+    line-height: 2.8;
+    top: -644px;
 
-  .slideSubtitle,
-  .slideTitle {
-    font-size: 2rem;
-    font-weight: normal;
-    letter-spacing: 0.2ch;
-    text-transform: uppercase;
-    margin: 0;
+    .slideIcon,
+    .slideLastLogin, 
+    .slideFunds, 
+    .slideLastDeposit, 
+    .slideEarnings, 
+    .slideLastWin, 
+    .slideMostWins, 
+    .slideTips,
+    .slideDescription {
+      margin: 0;
+      font-size: 0.8rem;
+      font-weight: bold;
+      letter-spacing: 0.2ch;
+    }
+
+    .slideIcon {
+      height: 0px;
+      width: 0px;
+    }
+
+    .slideWelcome {
+      font-size: 2.5rem;
+      font-weight: normal;
+      letter-spacing: 0.2ch;
+      text-transform: uppercase;
+      margin: 0;
+      // text-align: center;
+    }
+
+    .slideUserName {
+      font-size: 1.5rem;
+      font-weight: normal;
+      letter-spacing: 0.1ch;
+    }
   }
 
-  .slideSubtitle::before {
-    content: "— ";
+  @media screen and (min-width: 1200px) {
+    .slideContentInner {
+      transform-style: preserve-3d;
+      transform: translateZ(2rem);
+      transition: opacity 0.3s linear;
+      text-shadow: 0 0.1rem 1rem white;
+      opacity: 0;
+      color: #97eae5;
+      padding-left: 65px;
+      text-align: justify;
+      line-height: 2.4;
+      top: -547px;
+  
+      .slideLastLogin, 
+      .slideFunds, 
+      .slideLastDeposit, 
+      .slideEarnings, 
+      .slideLastWin, 
+      .slideMostWins, 
+      .slideTips,
+      .slideDescription {
+        margin: 0;
+        font-size: 0.8rem;
+        font-weight: bold;
+        letter-spacing: 0.2ch;
+      }
+  
+      .slideWelcome {
+        font-size: 2.5rem;
+        font-weight: normal;
+        letter-spacing: 0.2ch;
+        text-transform: uppercase;
+        margin: 0;
+        width: 162%;
+        text-align: center;
+      }
+
+      .slideGreg {
+        font-size: 2.5rem;
+        font-weight: normal;
+        letter-spacing: 0.2ch;
+        text-transform: uppercase;
+        margin: 0;
+        width: 158%;
+        text-align: center;
+      }
+  
+      .slideUserName {
+        font-size: 1.5rem;
+        font-weight: normal;
+        letter-spacing: 0.1ch;
+        width: 101%;
+      }
+    }
   }
 
-  .slideDescription {
-    margin: 0;
-    font-size: 0.8rem;
-    letter-spacing: 0.2ch;
+  @media screen and (min-width: 1600px) {
+    .slideContentInner {
+      transform-style: preserve-3d;
+      transform: translateZ(2rem);
+      transition: opacity 0.3s linear;
+      text-shadow: 0 0.1rem 1rem white;
+      opacity: 0;
+      color: #97eae5;
+      padding-left: 65px;
+      text-align: justify;
+      line-height: 2.4;
+      top: -644px;
+  
+      .slideLastLogin, 
+      .slideFunds, 
+      .slideLastDeposit, 
+      .slideEarnings, 
+      .slideLastWin, 
+      .slideMostWins, 
+      .slideTips,
+      .slideDescription {
+        margin: 0;
+        font-size: 0.8rem;
+        font-weight: bold;
+        letter-spacing: 0.2ch;
+      }
+  
+      .slideWelcome {
+        font-size: 2.5rem;
+        font-weight: normal;
+        letter-spacing: 0.2ch;
+        text-transform: uppercase;
+        margin: 0;
+        // text-align: center;
+      }
+  
+      .slideUserName {
+        font-size: 1.5rem;
+        font-weight: normal;
+        letter-spacing: 0.1ch;
+      }
+    }
   }
-}
+
+    // .slideContentInner[data-active] {
+
+      // .slideWelcome::before {
+      //   content: "Welcome Back ";
+      // }
+
+      // .slideUserName::before {
+      //   content: "User Name: ";
+      //   color: #eca9a9;
+      // }
+
+      // .slideLastLogin::before {
+      //   content: "Last Login: ";
+      //   color: #eca9a9;
+      // }
+
+      // .slideTips::before {
+      //   content: "Tips: ";
+      //   color: #eca9a9;
+      // }
+
+      // .slideEarnings::before {
+      //   content: "My Earnings: ";
+      //   color: #eca9a9;
+      // }
+
+      // .slideFunds::before {
+      //   content: "Funds: ";
+      //   color: #eca9a9;
+      // }
+
+      // .slideLastDeposit::before {
+      //   content: "Last Deposit: ";
+      //   color: #eca9a9;
+      // }
+
+      // .slideLastWin::before {
+      //   content: "Last Win: ";
+      //   color: #eca9a9;
+      // }
+
+      // .slideMostWins::before {
+      //   content: "Most Wins: ";
+      //   color: #eca9a9;
+      // }
+    // }
+  
+
 
 .slideBackground {
   // background-image: url("../images/throughTheDoors.png");
@@ -220,8 +505,8 @@ body {
 
     &:hover {
       transition: none;
-      transform: perspective(1000px) rotateY(calc(var(--x) * 45deg))
-        rotateX(calc(var(--y) * -45deg));
+      transform: perspective(1000px) rotateY(calc(var(--x) * 5deg))
+        rotateX(calc(var(--y) * -5deg));
     }
   }
 }

@@ -1,43 +1,50 @@
-import React from "react";
-import { useMediaQuery } from 'react-responsive'
+import React, { useState } from "react";
+import { useMediaQuery } from 'react-responsive';
+import ImageDepthMap from 'react-depth-map'
 
-//Components
-import Slides from './slides'
-
-//Video
-// import Lounge from "../../videos/lounge.mp4";
+// Components
+import Fade from "../Fade";
+import Slides from './slides';
 
 //Style
 import "../../style/swiper.scss";
+import "../../style/base.css";
+import "../../style/styles.css";
+
+// Images
+import Scifi from '../../images/scifi-room.jpg';
+import Depth from '../../images/depthmap.jpg';
 
 function Desktop() {
+    const [show, setShow] = useState(false);
     const Desktop = ({ children }) => {
         const isDesktop = useMediaQuery({ minWidth: 1550 })
         return isDesktop ? children : null
       }
         return (
           <Desktop>
-            <div className="background"
-                 style={{
-                   height: "115%",
-                 }}>
-              {/* <video autoPlay loop muted
-                style={{
-                  position: "absolute",
-                  width: "100%",  
-                  left: "50%",
-                  top: "48%",
-                  height: "96%",
-                  objectFit: "cover",
-                  transform: "translate(-50%, -50%)",
-                  zIndex: "-1"
-                }}>
-                <source src={Lounge} type="video/mp4"/>
-              </video> */}
-              <Slides />
+            <button className="hideButton"
+                    onClick={() => setShow(show => !show)}>
+              {show ? "hide" : "show"}
+            </button>
+            <Fade show={show}>
+              
+                <div className="slider">
+                  <Slides />
+                </div>
+              
+            </Fade>
+            <div className="background">
+              <ImageDepthMap
+                id="gl"
+                originalImg={Scifi}
+                depthImg={Depth}
+                verticalThreshold={25}
+                horizontalThreshold={15} > 
+              </ImageDepthMap>
             </div>
           </Desktop>
-    )
-}
+    );
+};
 
-export default Desktop;
+export default Desktop

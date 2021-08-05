@@ -1,0 +1,40 @@
+[
+    {
+      "id": 1,
+      "welcome": "Welcome Back ",
+      "name": "Greg",
+      "userName": "Username: GregW",
+      "lastLogin": "Last Login: 4-21-2021",
+      "winnings": "Earnings: $2,550",
+      "funds": "Funds: $7,293",
+      "lastDeposit": "Last Deposit: $300",
+      "tips": "Don't eat the yellow snow.",
+      "description": "",
+      "link": "/dashboard",
+      "iframe": 
+        "https://empyreanwebteam.github.io/empyrean-3d-iframe.github.io/avatar.html"
+    },
+    {
+      "id": 2,
+      "welcome": "Add ",
+      "name": "Funds",
+      "userName": "Use Card on File: XXXX-XXXX-XXXX-4321",
+      "lastLogin": "Enter New Card Details: ",
+      "winnings": "Amount to Add: $500.00",
+      "link": "/dashboard"
+    },
+    {
+      "id": 3,
+      "welcome": "Games",
+      "userName": "",
+      "lastLogin": "",
+      "funds": "",
+      "lastDeposit": "",
+      "tips": "",
+      "description": "",
+      "mostWins": "Most wins: Craps",
+      "lastWin": "Last Win: 4-21-2021",
+      "winnings": "Winnings: $2,550",
+      "link": "/dashboard"
+    }
+  ]

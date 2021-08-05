@@ -1,55 +1,98 @@
-import {React} from "react";
-import { AnimatePresence } from "framer-motion";
+import React, { useState, useRef } from 'react';
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Switch,
-  Route
+  Route,
+  Link
 } from "react-router-dom";
+import { ThemeProvider } from 'styled-components';
+import { useOnClickOutside } from './hooks';
+import { GlobalStyles } from './global';
+import { theme } from './theme';
+import FocusLock from 'react-focus-lock';
+import { PageTransition } from "@steveeeie/react-page-transition";
+
 
 // Style
 import './App.scss';
+import "./style/styles.css";
+
+//Components
+import { Burger, Menu } from './components';
+import Login from './components/Login/Login';
+import useToken from './components/App/useToken';
 
 // Pages
 import Home from './pages/home';
-import Model from './pages/model';
 import Dashboard from "./pages/dashboard";
+import ECvid from './components/ECvid';
 
+const Links = () => (
+  <>
+    <Link to="/ECvid"></Link>
+    <Link to="/"></Link>
+    <Link to="/dashboard"></Link>
+  </>
+);
 
 
 function App() {
-  const imageDetails = {
-    width: 1843,
-    height: 931,
-  };
+
+  const [open, setOpen] = useState(false);
+  const node = useRef();
+  const menuId = "main-menu";
+
+  useOnClickOutside(node, () => setOpen(false));
+
+  const { token, setToken } = useToken();
+
+  if(!token) {
+    return <Login setToken={setToken} />
+  }
 
   return (
-    <Router>
+    <ThemeProvider theme={theme}>
+      <>
+        <GlobalStyles />
+        <div ref={node}>
+          <FocusLock disabled={!open}>
+            <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
+            <Menu open={open} setOpen={setOpen} id={menuId} />
+          </FocusLock>
+        </div>
+    <BrowserRouter>
+    <Links />
       <Route
-        render={({ location }) => (
-          <AnimatePresence initial={false} exitBeforeEnter>
+        render={({ location }) => {
+          return (
+          <PageTransition
+            preset="scaleUpScaleUp"
+            transitionKey={location.pathname}
+          >
             <Switch location={location} key={location.pathname}>
+            <Route
+                exact
+                path='/ECvid'
+                component={ECvid}>
+              </Route>
               <Route
                 exact
                 path='/'
-                component={Home}
-                render={() => <Home imageDetails={imageDetails} />}
-              />
-              <Route
-                exact
-                path='/model/:id'
-                render={() => <Model imageDetails={imageDetails} />}
-              />
+                component={Home}>
+              </Route>
               <Route
                 exact
                 path='/dashboard'
-                component={Dashboard}
-                render={() => <Dashboard imageDetails={imageDetails} />}
-              />
+                component={Dashboard}>
+              </Route>
             </Switch>
-          </AnimatePresence>
-        )}
+          </PageTransition>
+          );
+        }}
       />
-    </Router>
+    </BrowserRouter>
+    </>
+    </ThemeProvider>
   );
 }
 

@@ -40,6 +40,13 @@ body {
   font-weight: 700;
 }
 
+@font-face {
+  font-family: "BlairITC TT";
+  src: local("BlairITC TT"),
+   url("./fonts/blairitc-tt-bold.ttf") format("truetype");
+  font-weight: bold;
+  }
+
 .font-bold {
   font-weight: 700;
 }

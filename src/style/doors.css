@@ -58,7 +58,7 @@ body {
 
 .lDoor {
   /* background-color: #000; */
-  height: 106%;
+  height: 94%;
   width: 54%;
   position: absolute;
   z-index: 4;
@@ -119,7 +119,7 @@ body {
 
 .rDoor {
   background-color: #000;
-  height: 106%;
+  height: 94%;
   width: 54%;
   position: absolute;
   z-index: 4;
@@ -178,7 +178,7 @@ body {
 
 #left-door {
   top: 0;
-  left: 0;
+  left: -9px;
   background-repeat: no-repeat;
   border-right: 1px solid black;
   /* transition */
@@ -189,7 +189,7 @@ body {
 
 #right-door {
   top: 0;
-  right: 0;
+  right: -9px;
   background-repeat: no-repeat;
   border-left: 1px solid black;
   /* transition */
@@ -215,7 +215,8 @@ body {
   justify-content: center;
   align-items: center;
   /* padding-left: 348px; */
-  margin-left: 50%;
+  /* margin-left: 50%; */
+  left: 30%;
 }
 
 .gLeft img {
@@ -232,7 +233,8 @@ body {
   justify-content: center;
   align-items: center;
   /* padding-right: 348px; */
-  margin-right: 50%;
+  /* margin-right: 50%; */
+  right: 30%;
 }
 
 .gRight img {

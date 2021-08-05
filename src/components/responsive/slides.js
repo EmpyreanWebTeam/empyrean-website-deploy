@@ -1,42 +1,19 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { FaBitcoin } from 'react-icons/fa';
 
+// import Sit from '../../SitDraco';
+// Components
+import Glitch from "../glitch";
+
+//Style
 import "../../style/swiper.scss";
+import "../../style/glitch.scss";
+
+// Data
+import slides from "../../data/slides.json";
 
 console.clear();
-
-const slides = [
-  {
-    title: "My Dashboard 0",
-    subtitle: "subtitle",
-    description: "description",
-    link: "/dashboard",
-    iframe: 
-      "https://empyreanwebteam.github.io/empyrean-3d-iframe.github.io/avatar.html",
-    image:
-      "https://jonedwards.tech/img/empyrean/gameStats/gameDashboard1.png"
-  },
-  {
-    title: "My Stats -1",
-    subtitle: "subtitle",
-    description: "description",
-    link: "/dashboard",
-    iframe: 
-      "https://empyreanwebteam.github.io/empyrean-3d-iframe.github.io/chair.html",
-    image:
-      "https://jonedwards.tech/img/empyrean/gameStats/gameDashboard2.png"
-  },
-  {
-    title: "Title -2",
-    subtitle: "subtitle",
-    description: "description",
-    link: "/dashboard",
-    iframe: 
-      "https://baetes.com/embed?id=SolarDrive1&animation=spin",
-    image:
-      "https://jonedwards.tech/img/empyrean/gameStats/gameDashboard3.png"
-  }
-];
 
 function useTilt(active) {
   const ref = React.useRef(null);
@@ -104,8 +81,18 @@ function Slide({ slide, offset }) {
   const active = offset === 0 ? true : null;
   const ref = useTilt(active);
 
+  // const animationLogo = document.querySelector('.animation-logo h1');
+  // animationLogo.classList.add('active');
+  // setInterval(() => {
+  //   animationLogo.classList.remove('active');
+  //   setTimeout(() => {
+  //     animationLogo.classList.add('active');
+  //   }, 100);
+  // }, 3000);
+
   return (
     <div
+      key={slide.id}
       ref={ref}
       className="slide"
       data-active={active}
@@ -113,46 +100,92 @@ function Slide({ slide, offset }) {
         "--offset": offset,
         "--dir": offset === 0 ? 0 : offset > 0 ? 1 : -1
       }}
-    >
-      {/* <div
-        className="slideBackground"
-        style={{
-          backgroundImage: `url('${slide.image}')`
-        }}
-      /> */}
-      <Link to={slide.link} style={{ textDecoration: 'none' }}>
-      <div
-          className="slideContentIframe"
-          style={{
-            iframeSource: `url('${slide.iframe}')`
-          }}
-          >
-        <div
-          className="slideContent"
-          style={{
-            backgroundImage: `url('${slide.image}')`
-          }}
-        >
-
-          <div className="slideContentInner">
-            <h2 className="slideTitle">{slide.title}</h2>
-            <h3 className="slideSubtitle">{slide.subtitle}</h3>
-            <iframe className="slideIframe"
-                    backgroundColor="transparent"
-                    src={slide.iframe}
-                    title="My Avitar"
-                    width="30vw" 
-                    height="15vw"
-                    frameBorder="0" 
-                    scrolling="no" 
-                    allowFullScreen="allowFullScreen"
-                    allowTransparency="true">
-            </iframe>
-            <p className="slideDescription">{slide.description}</p>
-          </div>
-        </div>
-        </div>
-      </Link>
+    >    
+          <Link to={slide.link} style={{ textDecoration: 'none' }}>
+            <div
+              className="slideContent"
+              style={{
+                backgroundImage: `url('${slide.iframe}')`
+              }}
+            >
+            <Glitch />
+            {/* <div class="glitch-demo">
+              <div class="glitch">
+                <div class="glitch__img"></div>
+                <div class="glitch__img"></div>
+                <div class="glitch__img"></div>
+                <div class="glitch__img"></div>
+                <div class="glitch__img"></div> */}
+            <div className="font-face-gm">
+            <div className="slideContentIframe">
+            <div className="slideContentInner">
+              <div className="text-center">
+                {/* <div className="error mx-auto" data-text="Welcome Back">Welcome Back</div> */}
+                <h2 className="slideWelcome">{slide.welcome}</h2>
+                <h2 className="slideGreg">{slide.name}</h2>
+              </div>
+              
+              <h3 className="slideUserName">{slide.userName}</h3>
+              <p className="slideLastLogin">{slide.lastLogin}</p>
+        
+              <p className="slideFunds">{slide.funds}</p>
+              <div className="slideIcon">
+                <FaBitcoin />
+              </div>
+              <p className="slideLastDeposit">{slide.lastDeposit}</p>
+              <p className="slideEarnings">{slide.earnings}</p>
+              <p className="slideLastWin">{slide.lastWin}</p>
+              <p className="slideMostWins">{slide.mostWins}</p>
+              <p className="slideWinnings">{slide.winnings}</p>
+              <p className="slideTips">{slide.tips}</p>
+              <iframe
+                className="slideIframe"
+                src="https://empyreanwebteam.github.io/empyrean-3d-iframe.github.io/avatar.html"
+                // src={slide.iframe}
+                backgroundColor="red"
+                title="My Avitar"
+                width="30vw" 
+                height="15vw"
+                frameBorder="0" 
+                scrolling="no" 
+                allowFullScreen="allowFullScreen"
+                allowtransparency="true">
+              </iframe>
+            </div>
+          
+          {/* <iframe className="slideIframe"
+                  src="https://empyreanwebteam.github.io/empyrean-3d-iframe.github.io/avatar.html"
+                  // src={slide.iframe}
+                  backgroundColor="red"
+                  title="My Avitar"
+                  width="30vw" 
+                  height="15vw"
+                  frameBorder="0" 
+                  scrolling="no" 
+                  allowFullScreen="allowFullScreen"
+                  allowtransparency="true">
+          </iframe> */}
+          {/* <model3d className="slideIframe"
+                     title="My Avitar"
+                     src={slide.model3d}
+                     width="30vw" 
+                     height="15vw"
+                     frameBorder="0" 
+                     scrolling="no" 
+                     allowFullScreen="allowFullScreen"
+                     allowtransparency="true">
+              <Canvas fallback={<Loader />}>
+                <directionalLight intensity={0.5} />
+                <ambientLight intensity={.2} />
+                <Sit />
+              </Canvas>
+            </model3d> */}
+            {/* </div> */}
+                </div>
+              </div>
+            </div>
+          </Link>
+        
     </div>
   );
 }
@@ -169,7 +202,7 @@ function Slides() {
 
             {[...slides, ...slides, ...slides].map((slide, i) => {
               let offset = slides.length + (state.slideIndex - i);
-              return <Slide slide={slide} offset={offset} key={i} />;
+              return <Slide slide={slide} offset={offset} key={slide.id} />;
             })}
           <button onClick={() => dispatch({ type: "NEXT" })}>›</button>
         </div>
