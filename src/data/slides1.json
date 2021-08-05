@@ -1,0 +1,24 @@
+  [
+    {
+      "id": 0,
+      "welcome": "Greg",
+      "userName": "GregW",
+      "lastLogin": "4-21-2021",
+      "tips": "Don't eat the yellow snow.",
+      "description": "",
+      "link": "/dashboard",
+      "model3d": "/Sit",
+      "iframe": "https://empyreanwebteam.github.io/empyrean-3d-iframe.github.io/avatar.html"
+    },
+    {
+      "id": 1,
+      "earnings": "$2,550",
+      "funds": "$7,293",
+      "lastDeposit": "$300"
+    },
+    {
+      "id": 2,
+      "mostWins": "Craps",
+      "lastWin": "04-21-2021"
+    }
+  ]
