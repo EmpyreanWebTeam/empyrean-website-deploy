@@ -1,6 +1,6 @@
 {
   "name": "empyrean-website",
-  "homepage": "https://github.com/EmpyreanWebTeam/empyrean-website-deploy.github.io",
+  "homepage": "https://empyreanwebteam.github.io/empyrean-website-deploy.github.io/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -42,7 +42,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy": "yarn build",
+    "predeploy": "yarn run build -b master",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
