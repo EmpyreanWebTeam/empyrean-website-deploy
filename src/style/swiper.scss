@@ -239,6 +239,12 @@ body {
   //   rotateY(calc(-35deg * var(--dir)));
 }
 
+iframe {
+  background-color: transparent;
+  border: 0;
+  color: black;
+}
+
 .slideIframe {
   border-radius: 5px;
   background: transparent;
