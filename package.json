@@ -42,7 +42,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy": "yarn build",
+    "predeploy": "yarn run build",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -68,6 +68,6 @@
   },
   "devDependencies": {
     "cors": "^2.8.5",
-    "gh-pages": "^2.2.0"
+    "gh-pages": "^3.2.3"
   }
 }
