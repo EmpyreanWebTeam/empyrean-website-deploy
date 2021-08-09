@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { FaBitcoin } from 'react-icons/fa';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "@fortawesome/free-brands-svg-icons";
 
 // import Sit from '../../SitDraco';
 // Components
@@ -9,6 +10,9 @@ import Glitch from "../glitch";
 //Style
 import "../../style/swiper.scss";
 import "../../style/glitch.scss";
+
+//Images
+import "../../images/bitcoin.png"
 
 // Data
 import slides from "../../data/slides.json";
@@ -123,25 +127,41 @@ function Slide({ slide, offset }) {
                 {/* <div className="error mx-auto" data-text="Welcome Back">Welcome Back</div> */}
                 <h2 className="slideWelcome">{slide.welcome}</h2>
                 <h2 className="slideGreg">{slide.name}</h2>
-              </div>
               
+              <p className="slideCard">{slide.card}</p>
+              <p className="slideCardOnFile">{slide.cardOnFile}</p>
               <h3 className="slideUserName">{slide.userName}</h3>
               <p className="slideLastLogin">{slide.lastLogin}</p>
-        
-              <p className="slideFunds">{slide.funds}</p>
-              <div className="slideIcon">
-                <FaBitcoin />
+              
+              <div className="slideIconFlex">
+                <div className="slideIcon">
+                  <FontAwesomeIcon
+                    className="slideIcon"
+                    icon={require("@fortawesome/free-brands-svg-icons")[slide.icon0]}
+                  />
+                  <FontAwesomeIcon
+                    className="slideIcon"
+                    icon={require("@fortawesome/free-brands-svg-icons")[slide.icon1]}
+                  />
+                  <FontAwesomeIcon
+                    className="slideIcon"
+                    icon={require("@fortawesome/free-brands-svg-icons")[slide.icon2]}
+                  />
+                </div>
               </div>
+              
+              <p className="slideFunds">{slide.funds}</p>
               <p className="slideLastDeposit">{slide.lastDeposit}</p>
               <p className="slideEarnings">{slide.earnings}</p>
               <p className="slideLastWin">{slide.lastWin}</p>
               <p className="slideMostWins">{slide.mostWins}</p>
               <p className="slideWinnings">{slide.winnings}</p>
               <p className="slideTips">{slide.tips}</p>
+              </div>
               <iframe
                 className="slideIframe"
-                src="https://empyreanwebteam.github.io/empyrean-3d-iframe.github.io/avatar.html"
-                // src={slide.iframe}
+                // src="https://empyreanwebteam.github.io/empyrean-3d-iframe.github.io/avatar.html"
+                src={slide.iframe}
                 backgroundColor="red"
                 title="My Avitar"
                 width="30vw" 

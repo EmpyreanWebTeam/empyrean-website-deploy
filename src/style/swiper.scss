@@ -281,7 +281,7 @@ iframe {
     transition: opacity 0.3s linear;
     text-shadow: 0 0.1rem 1rem white;
     opacity: 0;
-    color: #97eae5;
+    color: rgb(245, 231, 201);
     padding-left: 65px;
     text-align: justify;
     line-height: 2.8;
@@ -302,9 +302,25 @@ iframe {
       letter-spacing: 0.2ch;
     }
 
+    .slideCard {
+      top: 3em;
+    }
+
+    .slideCardOnFile {
+      top: 4em;
+    }
+
+    .slideIconFlex {
+      left: 11vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     .slideIcon {
-      height: 0px;
-      width: 0px;
+      height: 5em;
+      width: 5em;
+      flex: auto;
     }
 
     .slideWelcome {
@@ -330,7 +346,7 @@ iframe {
       transition: opacity 0.3s linear;
       text-shadow: 0 0.1rem 1rem white;
       opacity: 0;
-      color: #97eae5;
+      color: rgb(245, 231, 201);
       padding-left: 65px;
       text-align: justify;
       line-height: 2.4;
@@ -356,7 +372,7 @@ iframe {
         letter-spacing: 0.2ch;
         text-transform: uppercase;
         margin: 0;
-        width: 162%;
+        width: 200%;
         text-align: center;
       }
 
@@ -386,7 +402,7 @@ iframe {
       transition: opacity 0.3s linear;
       text-shadow: 0 0.1rem 1rem white;
       opacity: 0;
-      color: #97eae5;
+      color: rgb(245, 231, 201);
       padding-left: 65px;
       text-align: justify;
       line-height: 2.4;
@@ -473,7 +489,6 @@ iframe {
 
 
 .slideBackground {
-  // background-image: url("../images/throughTheDoors.png");
   position: fixed;
   top: 0;
   left: -10%;
