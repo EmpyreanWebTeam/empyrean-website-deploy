@@ -7,7 +7,7 @@ import Fade from "../Fade";
 import Slides from './slides';
 
 // Images
-import Scifi from '../../images/speakeasyRoom.png';
+import Scifi from '../../images/SpeakeasyRoom2.jpeg';
 import Depth from '../../images/depthmap.jpg';
 
 // Style
