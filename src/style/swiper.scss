@@ -257,8 +257,8 @@ iframe {
   border-bottom-style: solid;
   border-top-width: 0px;
   border-top-style: solid;
-  left: 26vw;
-  bottom: 4vw;
+  left: 32vw;
+  bottom: 0vw;
 }
 
 .slideContentIframe {
@@ -275,6 +275,11 @@ iframe {
   
 }
 
+.cardInfo {
+  width: 100%;
+  padding-left: 3vw;
+}
+
   .slideContentInner {
     transform-style: preserve-3d;
     transform: translateZ(2rem);
@@ -282,7 +287,7 @@ iframe {
     text-shadow: 0 0.1rem 1rem white;
     opacity: 0;
     color: rgb(245, 231, 201);
-    padding-left: 65px;
+    // padding-left: 65px;
     text-align: justify;
     line-height: 2.8;
     top: -644px;
@@ -303,18 +308,19 @@ iframe {
     }
 
     .slideCard {
-      top: 3em;
+      top: 0em;
     }
 
     .slideCardOnFile {
-      top: 4em;
+      top: -1em;
+      width: 18em;
     }
 
     .slideIconFlex {
-      left: 11vw;
+      right: 14vw;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      justify-content: left;
+      align-items: start;
     }
 
     .slideIcon {
@@ -347,10 +353,11 @@ iframe {
       text-shadow: 0 0.1rem 1rem white;
       opacity: 0;
       color: rgb(245, 231, 201);
-      padding-left: 65px;
+      // padding-left: 65px;
       text-align: justify;
       line-height: 2.4;
       top: -547px;
+      width: 200%;
   
       .slideLastLogin, 
       .slideFunds, 
@@ -372,7 +379,7 @@ iframe {
         letter-spacing: 0.2ch;
         text-transform: uppercase;
         margin: 0;
-        width: 200%;
+        width: 100%;
         text-align: center;
       }
 
@@ -382,8 +389,13 @@ iframe {
         letter-spacing: 0.2ch;
         text-transform: uppercase;
         margin: 0;
-        width: 158%;
-        text-align: center;
+        width: 100%;
+        text-align: left;
+        bottom: 1em;
+      }
+
+      .slideNewCard {
+        width: 0em;
       }
   
       .slideUserName {

@@ -12,7 +12,6 @@ import "../../style/swiper.scss";
 import "../../style/glitch.scss";
 
 //Images
-import "../../images/bitcoin.png"
 
 // Data
 import slides from "../../data/slides.json";
@@ -123,17 +122,8 @@ function Slide({ slide, offset }) {
             <div className="font-face-gm">
             <div className="slideContentIframe">
             <div className="slideContentInner">
-              <div className="text-center">
-                {/* <div className="error mx-auto" data-text="Welcome Back">Welcome Back</div> */}
-                <h2 className="slideWelcome">{slide.welcome}</h2>
-                <h2 className="slideGreg">{slide.name}</h2>
-              
-              <p className="slideCard">{slide.card}</p>
-              <p className="slideCardOnFile">{slide.cardOnFile}</p>
-              <h3 className="slideUserName">{slide.userName}</h3>
-              <p className="slideLastLogin">{slide.lastLogin}</p>
-              
-              <div className="slideIconFlex">
+            <h2 className="slideWelcome">{slide.welcome}</h2>
+            <div className="slideIconFlex">
                 <div className="slideIcon">
                   <FontAwesomeIcon
                     className="slideIcon"
@@ -149,14 +139,27 @@ function Slide({ slide, offset }) {
                   />
                 </div>
               </div>
-              
-              <p className="slideFunds">{slide.funds}</p>
-              <p className="slideLastDeposit">{slide.lastDeposit}</p>
-              <p className="slideEarnings">{slide.earnings}</p>
-              <p className="slideLastWin">{slide.lastWin}</p>
-              <p className="slideMostWins">{slide.mostWins}</p>
-              <p className="slideWinnings">{slide.winnings}</p>
-              <p className="slideTips">{slide.tips}</p>
+              <div className="cardInfo">
+                <div className="text-center">
+                  {/* <div className="error mx-auto" data-text="Welcome Back">Welcome Back</div> */}
+                  
+                  <h2 className="slideGreg">{slide.name}</h2>
+                
+                  <h3 className="slideCard">{slide.card}</h3>
+                  <p className="slideCardOnFile">{slide.cardOnFile}</p>
+                  <h3 className="slideUserName">{slide.userName}</h3>
+                  <p className="slideNewCard">{slide.newCardDetails}</p>
+                  <p className="slideLastLogin">{slide.lastLogin}</p>
+                  
+                  
+                  <p className="slideFunds">{slide.funds}</p>
+                  <p className="slideLastDeposit">{slide.lastDeposit}</p>
+                  <p className="slideEarnings">{slide.earnings}</p>
+                  <p className="slideLastWin">{slide.lastWin}</p>
+                  <p className="slideMostWins">{slide.mostWins}</p>
+                  <p className="slideWinnings">{slide.winnings}</p>
+                  <p className="slideTips">{slide.tips}</p>
+                </div>
               </div>
               <iframe
                 className="slideIframe"

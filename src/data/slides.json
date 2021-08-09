@@ -24,7 +24,7 @@
       "name": "",
       "card": "Use Card on File:",
       "cardOnFile": " XXXX-XXXX-XXXX-4321",
-      "lastLogin": "Enter New Card Details: ",
+      "newCardDetails": "Enter New Card Details: :________-________-________-________ ",
       "winnings": "Amount to Add: $500.00",
       "funds": "Funds: $7,293",
       "lastDeposit": "",
