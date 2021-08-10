@@ -36,14 +36,14 @@ function Laptop() {
               
             {/* </Fade> */}
             <div className="background">
-              <ImageDepthMap
+              {/* <ImageDepthMap
                 id="gl"
                 originalImg={Scifi}
                 depthImg={Depth}
                 verticalThreshold={25}
                 horizontalThreshold={15} 
                 >
-              </ImageDepthMap>
+              </ImageDepthMap> */}
             </div>
           </Laptop>
     )
