@@ -19,8 +19,8 @@ import "./style/styles.css";
 
 //Components
 import { Burger, Menu } from './components';
-import Login from './components/Login/Login';
-import useToken from './components/App/useToken';
+// import Login from './components/Login/Login';
+// import useToken from './components/App/useToken';
 
 // Pages
 import Home from './pages/home';
@@ -42,11 +42,11 @@ function App() {
 
   useOnClickOutside(node, () => setOpen(false));
 
-  const { token, setToken } = useToken();
+  // const { token, setToken } = useToken();
 
-  if(!token) {
-    return <Login setToken={setToken} />
-  }
+  // if(!token) {
+  //   return <Login setToken={setToken} />
+  // }
 
   return (
     <ThemeProvider theme={theme}>
