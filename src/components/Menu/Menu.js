@@ -1,7 +1,7 @@
 import React from 'react';
 import { bool } from 'prop-types';
 import { StyledMenu } from './Menu.styled';
-import Logout from '../Login/Logout';
+// import Logout from '../Login/Logout';
 
 
 const Menu = ({ open, ...props }) => {
@@ -31,7 +31,7 @@ const Menu = ({ open, ...props }) => {
         </a>
       <a href="/" tabIndex={tabIndex}>
         <span aria-hidden="true"></span>
-        <Logout />
+        {/* <Logout /> */}
         </a>
     </StyledMenu>
   )
