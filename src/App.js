@@ -24,14 +24,12 @@ import useToken from './components/App/useToken';
 
 // Pages
 import Home from './pages/home';
-import Dashboard from "./pages/dashboard";
-import ECvid from './components/ECvid';
+// import ECvid from './components/ECvid';
 
 const Links = () => (
   <>
-    <Link to="/ECvid"></Link>
+    {/* <Link to="/ECvid"></Link> */}
     <Link to="/"></Link>
-    <Link to="/dashboard"></Link>
   </>
 );
 
@@ -70,21 +68,17 @@ function App() {
             transitionKey={location.pathname}
           >
             <Switch location={location} key={location.pathname}>
-            <Route
+            {/* <Route
                 exact
                 path='/ECvid'
                 component={ECvid}>
-              </Route>
+              </Route> */}
               <Route
                 exact
                 path='/'
                 component={Home}>
               </Route>
-              <Route
-                exact
-                path='/dashboard'
-                component={Dashboard}>
-              </Route>
+              
             </Switch>
           </PageTransition>
           );
