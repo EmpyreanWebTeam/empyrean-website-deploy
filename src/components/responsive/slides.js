@@ -161,34 +161,7 @@ function Slide({ slide, offset }) {
                   <p className="slideTips">{slide.tips}</p>
                 </div>
               </div>
-              {/* <div class="sketchfab-embed-wrapper"> 
-                <iframe title="Batman Arkham Knight: Batman" 
-                        frameborder="0" 
-                        allowfullscreen mozallowfullscreen="true" 
-                        webkitallowfullscreen="true" allow="fullscreen; autoplay; vr" 
-                        xr-spatial-tracking execution-while-out-of-viewport 
-                        execution-while-not-rendered web-share 
-                        src="https://sketchfab.com/models/babb873977dc4393827e53c1202e5992/embed?autospin=1&autostart=1&preload=1"> 
-                </iframe> 
-                  <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> 
-                    <a href="https://sketchfab.com/3d-models/batman-arkham-knight-batman-babb873977dc4393827e53c1202e5992?utm_medium=embed&utm_campaign=share-popup&utm_content=babb873977dc4393827e53c1202e5992" 
-                      target="_blank" style="font-weight: bold; color: #1CAAD9;"> 
-                        Batman Arkham Knight: Batman 
-                    </a> 
-                        by 
-                    <a href="https://sketchfab.com/EWTube0?utm_medium=embed&utm_campaign=share-popup&utm_content=babb873977dc4393827e53c1202e5992" 
-                      target="_blank" 
-                      style="font-weight: bold; color: #1CAAD9;"> 
-                        EWTube0 
-                    </a> 
-                      on 
-                    <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=babb873977dc4393827e53c1202e5992" 
-                      target="_blank" 
-                      style="font-weight: bold; color: #1CAAD9;">
-                        Sketchfab
-                    </a>
-                  </p>
-                </div> */}
+
               <iframe
                 className="slideIframe"
                 // src="https://empyreanwebteam.github.io/empyrean-3d-iframe.github.io/avatar.html"

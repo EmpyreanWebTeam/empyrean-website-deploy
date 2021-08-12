@@ -29,7 +29,7 @@ body {
 }
 
 .background {
-  background-image: url("../images/SpeakeasyRoom2.jpeg");
+  background-image: url("../images/speakeasyRoom3.jpeg");
   background-size: cover;
   background-position: 50% 50%;
   position: fixed;
@@ -221,7 +221,7 @@ body {
 
 .slideContent {
   // background-image: url("../images/ECsquare.png");
-  width: 54vw;
+  width: 55vw;
   height: 40vw;
   background-size: cover;
   background-position: center center;
@@ -258,7 +258,7 @@ iframe {
   border-top-width: 0px;
   border-top-style: solid;
   left: 32vw;
-  bottom: 0vw;
+  top: 1em;
 }
 
 .slideContentIframe {
@@ -284,7 +284,7 @@ iframe {
     transform-style: preserve-3d;
     transform: translateZ(2rem);
     transition: opacity 0.3s linear;
-    text-shadow: 0 0.1rem 1rem white;
+    text-shadow: 0 0.1rem 1rem #000;
     opacity: 0;
     color: rgb(245, 231, 201);
     // padding-left: 65px;
@@ -395,7 +395,7 @@ iframe {
       }
 
       .slideNewCard {
-        width: 0em;
+        width: 21em;
       }
   
       .slideUserName {
