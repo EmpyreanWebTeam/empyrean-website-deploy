@@ -117,10 +117,10 @@ function Slide({ slide, offset }) {
                       <div className="slideContentIframe">
                         <div className="cardInfo">
                           <div className="slideContentInner">
-                            <div className="text-center">
+                            
                                 <h2 className="slideTitle">{slide.title}</h2>
                                 <h3 className="slideName">{slide.name}</h3>
-                            </div>
+                            
                                 {/* SLIDER CARD 0 */}
                                 <h3 className="slideUserName">{slide.userName}</h3>
                                   <p className="slideLastLogin">{slide.lastLogin}</p>

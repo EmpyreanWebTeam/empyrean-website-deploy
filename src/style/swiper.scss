@@ -278,6 +278,8 @@ iframe.slideIframe {
   height: 20vw;
   left: 16vw;
   bottom: 8em;
+  opacity: 0.8;
+  // box-shadow: 22px 1.1rem 0.6rem black;
 }
 
 div.shadow.slideIframe2 {
@@ -382,7 +384,7 @@ div.shadow.slideIframe2 {
       transform-style: preserve-3d;
       transform: translateZ(2rem);
       transition: opacity 0.3s linear;
-      text-shadow: 0 1.1rem 1rem black;
+      text-shadow: 22px 1.1rem 0.6rem black;
       opacity: 0;
       color: rgb(245, 231, 201);
       // padding-left: 65px;
@@ -445,8 +447,8 @@ div.shadow.slideIframe2 {
         letter-spacing: 0.2ch;
         text-transform: uppercase;
         margin: 0;
-        width: 100%;
-        text-align: center;
+        width: 50%;
+        text-align: left;
         bottom: 1em;
       }
 
