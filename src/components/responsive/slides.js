@@ -112,100 +112,79 @@ function Slide({ slide, offset }) {
               }}
             >
             <Glitch />
-            {/* <div class="glitch-demo">
-              <div class="glitch">
-                <div class="glitch__img"></div>
-                <div class="glitch__img"></div>
-                <div class="glitch__img"></div>
-                <div class="glitch__img"></div>
-                <div class="glitch__img"></div> */}
-            <div className="font-face-gm">
-            <div className="slideContentIframe">
-            <div className="slideContentInner">
-            <h2 className="slideWelcome">{slide.welcome}</h2>
-            <div className="slideIconFlex">
-                <div className="slideIcon">
-                  <FontAwesomeIcon
-                    className="slideIcon"
-                    icon={require("@fortawesome/free-brands-svg-icons")[slide.icon0]}
-                  />
-                  <FontAwesomeIcon
-                    className="slideIcon"
-                    icon={require("@fortawesome/free-brands-svg-icons")[slide.icon1]}
-                  />
-                  <FontAwesomeIcon
-                    className="slideIcon"
-                    icon={require("@fortawesome/free-brands-svg-icons")[slide.icon2]}
-                  />
-                </div>
-              </div>
-              <div className="cardInfo">
-                <div className="text-center">
-                  {/* <div className="error mx-auto" data-text="Welcome Back">Welcome Back</div> */}
-                  
-                  <h2 className="slideGreg">{slide.name}</h2>
-                
-                  <h3 className="slideCard">{slide.card}</h3>
-                  <p className="slideCardOnFile">{slide.cardOnFile}</p>
-                  <h3 className="slideUserName">{slide.userName}</h3>
-                  <p className="slideNewCard">{slide.newCardDetails}</p>
-                  <p className="slideLastLogin">{slide.lastLogin}</p>
-                  
-                  
-                  <p className="slideFunds">{slide.funds}</p>
-                  <p className="slideLastDeposit">{slide.lastDeposit}</p>
-                  <p className="slideEarnings">{slide.earnings}</p>
-                  <p className="slideLastWin">{slide.lastWin}</p>
-                  <p className="slideMostWins">{slide.mostWins}</p>
-                  <p className="slideWinnings">{slide.winnings}</p>
-                  <p className="slideTips">{slide.tips}</p>
-                </div>
-              </div>
-
-              <iframe
-                className="slideIframe"
-                // src="https://empyreanwebteam.github.io/empyrean-3d-iframe.github.io/avatar.html"
-                src={slide.iframe}
-                backgroundColor="red"
-                title="My Avitar"
-                width="30vw" 
-                height="15vw"
-                frameBorder="0" 
-                scrolling="no" 
-                allowFullScreen="allowFullScreen"
-                allowtransparency="true">
-              </iframe>
-            </div>
-          
-          {/* <iframe className="slideIframe"
-                  src="https://empyreanwebteam.github.io/empyrean-3d-iframe.github.io/avatar.html"
-                  // src={slide.iframe}
-                  backgroundColor="red"
-                  title="My Avitar"
-                  width="30vw" 
-                  height="15vw"
-                  frameBorder="0" 
-                  scrolling="no" 
-                  allowFullScreen="allowFullScreen"
-                  allowtransparency="true">
-          </iframe> */}
-          {/* <model3d className="slideIframe"
-                     title="My Avitar"
-                     src={slide.model3d}
-                     width="30vw" 
-                     height="15vw"
-                     frameBorder="0" 
-                     scrolling="no" 
-                     allowFullScreen="allowFullScreen"
-                     allowtransparency="true">
-              <Canvas fallback={<Loader />}>
-                <directionalLight intensity={0.5} />
-                <ambientLight intensity={.2} />
-                <Sit />
-              </Canvas>
-            </model3d> */}
-            {/* </div> */}
-                </div>
+            
+              <div className="font-face-gm">
+                      <div className="slideContentIframe">
+                        <div className="cardInfo">
+                          <div className="slideContentInner">
+                            <div className="text-center">
+                                <h2 className="slideTitle">{slide.title}</h2>
+                                <h3 className="slideName">{slide.name}</h3>
+                            </div>
+                                {/* SLIDER CARD 0 */}
+                                <h3 className="slideUserName">{slide.userName}</h3>
+                                  <p className="slideLastLogin">{slide.lastLogin}</p>
+                                  <p className="slideWinnings">{slide.winnings}</p>
+                                  <p className="slideLastDeposit">{slide.lastDeposit}</p>
+                                  <p className="slideTips">{slide.tips}</p>
+                                <iframe
+                                  className="slideIframe"
+                                  src={slide.iframe}
+                                  backgroundColor="red"
+                                  title="My Avitar"
+                                  frameBorder="0" 
+                                  scrolling="no" 
+                                  allowFullScreen="false"
+                                  allowtransparency="true">
+                                </iframe>
+                                {/* SLIDER CARD 1 */}
+                                <p>{slide.fundingSource}</p>
+                                <div className="slideIconFlex">
+                                  <div className="slideIcon">
+                                    <FontAwesomeIcon
+                                      className="slideIcon"
+                                      icon={require("@fortawesome/free-brands-svg-icons")[slide.icon0]}
+                                    />
+                                    <FontAwesomeIcon
+                                      className="slideIcon"
+                                      icon={require("@fortawesome/free-brands-svg-icons")[slide.icon1]}
+                                    />
+                                    <FontAwesomeIcon
+                                      className="slideIcon"
+                                      icon={require("@fortawesome/free-brands-svg-icons")[slide.icon2]}
+                                    />
+                                  </div>
+                                </div>
+                                
+                                <h3 className="slideCard">{slide.card}</h3>
+                                <p className="slideCardOnFile">
+                                  <p>{slide.cardOnFile0}</p>
+                                  <p>{slide.cardOnFile1}</p>
+                                  <p>{slide.cardOnFile2}</p>
+                                  <p>{slide.newCardDetails}</p>
+                                </p>
+                                <p className="slideFunds">{slide.funds}</p>
+                                <p className="fundsAmount">{slide.fundsAmount}</p>
+                                <h2 className="addAmount">{slide.addAmount}</h2>
+                                {/* <p className="slideAddAmount">{slide.addAmount}</p> */}
+                                {/* SLIDER CARD 2 */}
+                                <p className="slideMostGames">{slide.mostGames}</p>
+                                <p className="slideMostWins">{slide.mostWins}</p>
+                                <p className="slideLastWin">{slide.lastWin}</p>
+                                  <iframe
+                                    className="slideIframe2"
+                                    src={slide.iframe2}
+                                    backgroundColor="red"
+                                    title="My Avitar"
+                                    frameBorder="0" 
+                                    scrolling="no" 
+                                    allowFullScreen="false"
+                                    allowtransparency="true">
+                                  </iframe>
+                          </div>
+                        
+                      </div>
+                  </div>
               </div>
             </div>
           </Link>
@@ -215,22 +194,23 @@ function Slide({ slide, offset }) {
 }
 
 
-function Slides() {
+
+  function Slides() {
   
-  const [state, dispatch] = React.useReducer(slidesReducer, initialState);
-
-  return (
-      
-        <div className="slides">
-          <button onClick={() => dispatch({ type: "PREV" })}>‹</button>
-
-            {[...slides, ...slides, ...slides].map((slide, i) => {
-              let offset = slides.length + (state.slideIndex - i);
-              return <Slide slide={slide} offset={offset} key={slide.id} />;
-            })}
-          <button onClick={() => dispatch({ type: "NEXT" })}>›</button>
-        </div>
-  )
-}
-
-  export default Slides;
+    const [state, dispatch] = React.useReducer(slidesReducer, initialState);
+  
+    return (
+        
+          <div className="slides">
+            <button onClick={() => dispatch({ type: "PREV" })}>‹</button>
+  
+              {[...slides, ...slides, ...slides].map((slide, i) => {
+                let offset = slides.length + (state.slideIndex - i);
+                return <Slide slide={slide} offset={offset} key={slide.id} />;
+              })}
+            <button onClick={() => dispatch({ type: "NEXT" })}>›</button>
+          </div>
+    )
+  }
+  
+    export default Slides;

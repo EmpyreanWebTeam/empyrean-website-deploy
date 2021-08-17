@@ -53,7 +53,7 @@ body {
   align-items: center;
   padding: 5% 5% 5% 5%;
   top: 95px;
-  > .slide {
+  > .slide0, .slide1, .slide2 {
     grid-area: -1 / 1;
   }
 
@@ -242,7 +242,7 @@ body {
 iframe {
   background-color: transparent;
   border: 0;
-  color: black;
+  color: red;
 }
 
 .slideIframe {
@@ -259,6 +259,38 @@ iframe {
   border-top-style: solid;
   left: 32vw;
   top: 1em;
+}
+
+iframe.slideIframe {
+  opacity: 0.7;
+}
+
+.slideIframe2 {
+  // border-radius: 5px;
+  // padding-right: 0px;
+  // padding-left: 1px;
+  // border-bottom-width: 0px;
+  // border-bottom-style: solid;
+  // border-top-width: 0px;
+  // border-top-style: solid;
+  background-color: transparent;
+  width: 33vw;
+  height: 20vw;
+  left: 16vw;
+  bottom: 8em;
+}
+
+div.shadow.slideIframe2 {
+  opacity: 0.8;
+  border-radius: 12px;
+  -moz-box-shadow: 4px 4px 14px #000;
+  -webkit-box-shadow: 4px 4px 14px #000;
+  box-shadow: 4px 4px 14px #000;
+  width: 31vw;
+  height: 18vw;
+  left: 18vw;
+  bottom: 6em;
+  z-index: -6;
 }
 
 .slideContentIframe {
@@ -311,13 +343,13 @@ iframe {
       top: 0em;
     }
 
-    .slideCardOnFile {
+    .slideCardOnFile [data-active]{
       top: -1em;
       width: 18em;
     }
 
     .slideIconFlex {
-      right: 14vw;
+      right: 21vw;
       display: flex;
       justify-content: left;
       align-items: start;
@@ -325,11 +357,11 @@ iframe {
 
     .slideIcon {
       height: 5em;
-      width: 5em;
+      width: 6em;
       flex: auto;
     }
 
-    .slideWelcome {
+    .slideTitle {
       font-size: 2.5rem;
       font-weight: normal;
       letter-spacing: 0.2ch;
@@ -350,7 +382,7 @@ iframe {
       transform-style: preserve-3d;
       transform: translateZ(2rem);
       transition: opacity 0.3s linear;
-      text-shadow: 0 0.1rem 1rem white;
+      text-shadow: 0 1.1rem 1rem black;
       opacity: 0;
       color: rgb(245, 231, 201);
       // padding-left: 65px;
@@ -359,12 +391,10 @@ iframe {
       top: -547px;
       width: 200%;
   
-      .slideLastLogin, 
-      .slideFunds, 
+      .slideLastLogin,  
       .slideLastDeposit, 
+      .slideWinnings,
       .slideEarnings, 
-      .slideLastWin, 
-      .slideMostWins, 
       .slideTips,
       .slideDescription {
         margin: 0;
@@ -372,25 +402,51 @@ iframe {
         font-weight: bold;
         letter-spacing: 0.2ch;
       }
+
+      .slideLastWin,
+      .slideMostWins,
+      .slideMostGames {
+        margin: 0;
+        font-size: 0.8rem;
+        font-weight: bold;
+        letter-spacing: 0.2ch;
+        bottom: 9vw;
+      }
+
+      .slideFunds,
+      .fundsAmount {
+        margin: 0;
+        font-size: 1rem;
+        letter-spacing: 0.0ch;
+        left: 32vw;
+        bottom: 26vw;
+        width: 14vw;
+      }
+
+      .addAmount {
+        left: 27vw;
+        bottom: 24vw;
+        width: 22vw;
+      }
   
-      .slideWelcome {
+      .slideTitle {
         font-size: 2.5rem;
+        font-weight: normal;
+        letter-spacing: 0.0ch;
+        text-transform: uppercase;
+        margin: 0;
+        width: 100%;
+        text-align: left;
+      }
+
+      .slideName {
+        font-size: 2.2rem;
         font-weight: normal;
         letter-spacing: 0.2ch;
         text-transform: uppercase;
         margin: 0;
         width: 100%;
         text-align: center;
-      }
-
-      .slideGreg {
-        font-size: 2.5rem;
-        font-weight: normal;
-        letter-spacing: 0.2ch;
-        text-transform: uppercase;
-        margin: 0;
-        width: 100%;
-        text-align: left;
         bottom: 1em;
       }
 
@@ -434,7 +490,7 @@ iframe {
         letter-spacing: 0.2ch;
       }
   
-      .slideWelcome {
+      .slideTitle {
         font-size: 2.5rem;
         font-weight: normal;
         letter-spacing: 0.2ch;
@@ -453,7 +509,7 @@ iframe {
 
     // .slideContentInner[data-active] {
 
-      // .slideWelcome::before {
+      // .slideTitle::before {
       //   content: "Welcome Back ";
       // }
 
@@ -508,6 +564,7 @@ iframe {
   bottom: 0;
   background-size: cover;
   background-position: center center;
+  // background-image: url("../images/ECsquare2.png");
   z-index: -1;
   opacity: 0;
   transition: opacity 0.3s linear, transform 0.3s ease-in-out;
@@ -523,6 +580,7 @@ iframe {
   .slideBackground {
     opacity: 0.2;
     transform: none;
+    background-image: url("../images/ECsquare2.png");
   }
 
   .slideContentInner {
