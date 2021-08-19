@@ -19,7 +19,6 @@
     "drei": "^2.2.21",
     "express": "^4.17.1",
     "framer-motion": "^4.1.17",
-    "gltf-pipeline": "^3.0.2",
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.1",
     "react-depth-map": "^1.0.9",

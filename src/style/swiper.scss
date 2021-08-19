@@ -40,6 +40,18 @@ body {
   z-index: 1;
 }
 
+.EEhamburger {
+  border-radius: 5px;
+  height: auto;
+  width: 9rem;
+  right: 52px;
+  top: 11px;
+  display:inline-block;
+  background:#eee6e6;
+  -webkit-mask:url("../images/EEhamburger.png") center/contain;
+          mask:url("../images/EEhamburger.png") center/contain;
+}
+
 .slider {
   top: 61px;
 }
@@ -118,15 +130,6 @@ body {
     top: 95px;
     > .slide {
       grid-area: -1 / 1;
-    }
-
-    .slideIframe2 {
-      background-color: transparent;
-      width: 33vw;
-      height: 20vw;
-      left: 16vw;
-      bottom: 8em;
-      opacity: 0.8;
     }
 
     > button {
@@ -437,72 +440,15 @@ div.shadow.slideIframe2 {
   padding-left: 3vw;
 }
 
-  // .slideContentInner {
-  //   transform-style: preserve-3d;
-  //   transform: translateZ(2rem);
-  //   transition: opacity 0.3s linear;
-  //   text-shadow: 0 0.1rem 1rem #000;
-  //   opacity: 0;
-  //   color: rgb(245, 231, 201);
-  //   // padding-left: 65px;
-  //   text-align: justify;
-  //   line-height: 2.8;
-  //   bottom: 6vw;
-
-  //   // .slideIcon,
-  //   .slideLastLogin, 
-  //   .slideFunds, 
-  //   .slideLastDeposit, 
-  //   .slideEarnings, 
-  //   .slideLastWin, 
-  //   .slideMostWins, 
-  //   .slideTips,
-  //   .slideDescription {
-  //     margin: 0;
-  //     font-size: 0.8rem;
-  //     font-weight: bold;
-  //     letter-spacing: 0.2ch;
-  //   }
-
-  //   .slideCard {
-  //     top: 0em;
-  //   }
-
-  //   .slideCardOnFile [data-active]{
-  //     top: -1em;
-  //     width: 18em;
-  //   }
-
-  //   .slideIconFlex {
-  //     right: 21vw;
-  //     display: flex;
-  //     justify-content: left;
-  //     align-items: start;
-  //   }
-
-    // .slideIcon {
-    //   height: 5em;
-    //   width: 6em;
-    //   flex: auto;
-    // }
-
-  //   .slideTitle {
-  //     font-size: 2.5rem;
-  //     font-weight: normal;
-  //     letter-spacing: 0.2ch;
-  //     text-transform: uppercase;
-  //     margin: 0;
-  //     // text-align: center;
-  //   }
-
-  //   .slideUserName {
-  //     font-size: 1.5rem;
-  //     font-weight: normal;
-  //     letter-spacing: 0.1ch;
-  //   }
-  // }
-
   @media screen and (max-width: 855px) {
+
+    .EEhamburger {
+      border-radius: 5px;
+      height: auto;
+      width: 10rem;
+      right: 64px;
+      top: -3px;
+    }
 
     .cardInfo {
       width: 109%;
@@ -649,6 +595,14 @@ div.shadow.slideIframe2 {
 
   @media screen and (min-width: 1200px) {
 
+    .EEhamburger {
+      border-radius: 5px;
+      height: auto;
+      width: 11rem;
+      right: 64px;
+      top: 6px;
+    }
+
     .slideContentInner {
       transform-style: preserve-3d;
       transform: translateZ(2rem);
@@ -674,6 +628,32 @@ div.shadow.slideIframe2 {
         letter-spacing: 0.2ch;
       }
 
+      .fundingSource {
+        bottom: 28vw;
+        width: 24vw;
+      }
+
+      .slideIconFlex {
+        right: 21vw;
+        display: flex;
+        justify-content: left;
+        align-items: start;
+      }
+
+      .slideIcon {
+        height: 4em;
+        width: 5em;
+        flex: auto;
+        right: 0vw;
+        bottom: 14vw;
+      }
+
+      .slideCard, .slideCardOnFile {
+        right: 0vw;
+        width: 26vw;
+        bottom: 27vw;
+      }
+
       .slideLastWin,
       .slideMostWins,
       .slideMostGames {
@@ -681,7 +661,8 @@ div.shadow.slideIframe2 {
         font-size: 0.8rem;
         font-weight: bold;
         letter-spacing: 0.2ch;
-        bottom: 9vw;
+        bottom: 33vw;
+        width: 27vw;
       }
 
       .slideFunds,
@@ -690,13 +671,13 @@ div.shadow.slideIframe2 {
         font-size: 1rem;
         letter-spacing: 0.0ch;
         left: 32vw;
-        bottom: 26vw;
+        bottom: 49vw;
         width: 14vw;
       }
 
       .addAmount {
         left: 27vw;
-        bottom: 24vw;
+        bottom: 46vw;
         width: 22vw;
       }
 
@@ -713,6 +694,15 @@ div.shadow.slideIframe2 {
         border-top-style: solid;
         left: 30vw;
         bottom: 20vw;
+      }
+
+      .slideIframe2 {
+        background-color: transparent;
+        width: 33vw;
+        height: 20vw;
+        left: 16vw;
+        bottom: 35vw;
+        opacity: 0.8;
       }
   
       .slideTitle {

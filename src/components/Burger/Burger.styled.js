@@ -1,8 +1,9 @@
 import styled from 'styled-components';
-import Hamburger from '../../images/EEhamburger.png';
+// import Hamburger from '../../images/EEhamburger.png';
+// background-image: url(${Hamburger});
+
 
 export const StyledBurger = styled.button`
-  background-image: url(${Hamburger});
   position: absolute;
   top: 1rem;
   left: 1rem;
