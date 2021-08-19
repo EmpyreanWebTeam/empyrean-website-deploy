@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/free-brands-svg-icons";
 
@@ -84,14 +83,6 @@ function Slide({ slide, offset }) {
   const active = offset === 0 ? true : null;
   const ref = useTilt(active);
 
-  // const animationLogo = document.querySelector('.animation-logo h1');
-  // animationLogo.classList.add('active');
-  // setInterval(() => {
-  //   animationLogo.classList.remove('active');
-  //   setTimeout(() => {
-  //     animationLogo.classList.add('active');
-  //   }, 100);
-  // }, 3000);
 
   return (
     <div
@@ -104,14 +95,13 @@ function Slide({ slide, offset }) {
         "--dir": offset === 0 ? 0 : offset > 0 ? 1 : -1
       }}
     >    
-          <Link to={slide.link} style={{ textDecoration: 'none' }}>
             <div
               className="slideContent"
-              style={{
-                backgroundImage: `url('${slide.iframe}')`
-              }}
+              // style={{
+              //   backgroundImage: `url('${slide.iframe}')`
+              // }}
             >
-            <Glitch />
+            {/* <Glitch /> */}
             
               <div className="font-face-gm">
                       <div className="slideContentIframe">
@@ -137,8 +127,9 @@ function Slide({ slide, offset }) {
                                   allowFullScreen="false"
                                   allowtransparency="true">
                                 </iframe>
+                        
                                 {/* SLIDER CARD 1 */}
-                                <p>{slide.fundingSource}</p>
+                                <p className="fundingSource">{slide.fundingSource}</p>
                                 <div className="slideIconFlex">
                                   <div className="slideIcon">
                                     <FontAwesomeIcon
@@ -167,6 +158,7 @@ function Slide({ slide, offset }) {
                                 <p className="fundsAmount">{slide.fundsAmount}</p>
                                 <h2 className="addAmount">{slide.addAmount}</h2>
                                 {/* <p className="slideAddAmount">{slide.addAmount}</p> */}
+                        
                                 {/* SLIDER CARD 2 */}
                                 <p className="slideMostGames">{slide.mostGames}</p>
                                 <p className="slideMostWins">{slide.mostWins}</p>
@@ -187,7 +179,6 @@ function Slide({ slide, offset }) {
                   </div>
               </div>
             </div>
-          </Link>
         
     </div>
   );
