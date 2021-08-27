@@ -1,0 +1,245 @@
+/* DOORS */
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  /* border: 1px solid #f1c70c; */
+  position: relative;
+  margin: 0 auto;
+  /* 3D */
+  perspective: 3000px;
+  transform-style: preserve-3d;
+}
+
+.inside {
+  width: 100%;
+  height: 25%;
+  z-index: -1;
+  position: relative;
+}
+
+.lounge {
+  width: 100%;
+  height: 400%;
+}
+
+.gLeftandRight {
+  height: 100%;
+  transition: .50s all;   
+  transition-delay: 2.4s;
+}
+
+.gLeftandRight:hover {
+  transition-duration: 6s;
+  transition-delay: 0.2s;
+  transition-timing-function: linear;
+  border-radius: 10%;
+  transition: transform 15s;
+  transform: scale(1);
+  margin: 0 auto;
+}
+
+
+/* Left Door */
+
+.lDoor {
+  /* background-color: #000; */
+  height: 94%;
+  width: 54%;
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  margin-left: -40px;
+  margin-top: -20px;
+  /* inner layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: 250ms linear;
+  transform-style: preserve-3d;
+}
+
+.back, .lDoor:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  transition: 250ms linear;
+  transform: translateZ(-12.5px);
+}
+
+.edge, .lDoor:after {
+  content: "";
+  width: 100%;
+  height: 12.5px;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: 250ms linear;
+  transform: rotateX(90deg) translateZ(12.5px);
+  transform-origin: bottom center;
+}
+.open .lDoor, .open .door:before, .open .lDoor:after {
+  transition-timing-function: cubic-bezier(0, 0, 0, 1);
+}
+.open .lDoor {
+  transform: rotateX(-90deg);
+  background-color: #000;
+}
+.back, .open .lDoor:before {
+  background-color: #000;
+}
+.edge, .open .lDoor:after {
+  background-color: #000;
+}
+
+/* Right Door */
+
+.rDoor {
+  background-color: #000;
+  height: 94%;
+  width: 54%;
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  right: 0;
+  margin-right: -40px;
+  margin-top: -20px;
+  /* inner layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: 250ms linear;
+  transform-style: preserve-3d;
+}
+
+.back, .rDoor:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  transition: 250ms linear;
+  transform: translateZ(-12.5px);
+}
+
+.edge, .rDoor:after {
+  content: "";
+  width: 100%;
+  height: 12.5px;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: 250ms linear;
+  transform: rotateX(90deg) translateZ(12.5px);
+  transform-origin: bottom right;
+}
+.open .rDoor, .open .door:before, .open .rDoor:after {
+  transition-timing-function: cubic-bezier(0, 0, 0, 1);
+}
+.open .rDoor {
+  transform: rotateX(-90deg);
+  background-color: #000;
+}
+.back, .open .rDoor:before {
+  background-color: #000;
+}
+.edge, .open .rDoor:after {
+  background-color: #000;
+}
+
+#left-door {
+  top: 0;
+  left: -9px;
+  background-repeat: no-repeat;
+  border-right: 1px solid black;
+  /* transition */
+  transform-origin: left;
+  transition: transform 5s;
+  transition-timing-function: ease-in-out;
+}
+
+#right-door {
+  top: 0;
+  right: -9px;
+  background-repeat: no-repeat;
+  border-left: 1px solid black;
+  /* transition */
+  transform-origin: right;
+  transition: transform 5s;
+  transition-timing-function: ease-in-out;
+}
+
+/* Door swing effect */
+.wrapper:hover #left-door{
+  transform: rotateY(-125deg);
+}
+
+.wrapper:hover #right-door{
+  transform: rotateY(125deg);
+}
+
+
+.gLeft {
+  height: 92%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding-left: 348px; */
+  /* margin-left: 50%; */
+  left: 30%;
+}
+
+.gLeft img {
+  height: 100%;
+  width: auto;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.gRight {
+  height: 92%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding-right: 348px; */
+  /* margin-right: 50%; */
+  right: 30%;
+}
+
+.gRight img {
+  height: 100%;
+  width: auto;
+  display: table-cell;
+  vertical-align: middle;
+}

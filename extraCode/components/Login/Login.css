@@ -1,0 +1,76 @@
+/* .login-wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+
+.buttons {
+    width: 13%;
+    text-align: center;
+    align-items: center;
+}
+
+.loginBTN {
+    display: inline-block;
+    line-height: 60px;
+    padding-left: 5%;
+}
+
+.signupBTN {
+    display: inline-block;
+    line-height: 60px;
+    padding-left: 5%;
+}
+
+.Signup {
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sliderCard {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    color: rgb(168, 156, 127);
+    top: 33%;
+    left: 40%;
+    height: 100%;
+  }
+
+  #sliderCard {
+    width:400px;
+    height:300px;
+    background:#999;
+    text-align:center;
+    display:none;
+    margin-top:0;
+    margin:10px;
+  }
+
+  .ECdoors {
+    position: relative;
+    padding-top: 56.25%;
+    height: 100%;
+    float: left;
+    padding: none;
+    left: 0;
+    top: -75px;
+  }
+
+  #video {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    right: 0;
+    top: 0;
+    outline: none;
+  }
+
+  .rPlayer {
+    z-index: 99;
+  } */
