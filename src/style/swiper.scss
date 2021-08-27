@@ -47,9 +47,14 @@ body {
   right: 52px;
   top: 11px;
   display:inline-block;
-  background:#eee6e6;
-  -webkit-mask:url("../images/EEhamburger.png") center/contain;
-          mask:url("../images/EEhamburger.png") center/contain;
+  background: transparent;
+  transition: transform .7s;
+}
+
+.EEhamburger:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5);
 }
 
 .slider {
@@ -346,31 +351,6 @@ iframe {
   height: 21vw;
 }
 
-select {
-  -webkit-appearance: button;
-  -webkit-border-radius: 5px;
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-  -webkit-padding-end: 20px;
-  -webkit-padding-start: 2px;
-  -webkit-user-select: none;
-  // background-image: url("http://www.businesstours.co.uk/images/down_arrow_select.jpg"), 
-  // -webkit-linear-gradient(#E1E1E1, #FFF 30%, #FFF);
-  background-position: center right;
-  background-repeat: no-repeat;
-  border: 1px solid #CCC;
-  color: #999;
-  font-size: 90%;
-  font-family:Comfortaa, Arial, Helvetica, sans-serif;
-  margin: 0;
-  overflow: hidden;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  height: 40px;
-  width: 59%;
-}
-
 // .slideIframe {
 //   border-radius: 5px;
 //   background: transparent;
@@ -445,9 +425,10 @@ div.shadow.slideIframe2 {
     .EEhamburger {
       border-radius: 5px;
       height: auto;
-      width: 10rem;
-      right: 64px;
-      top: -3px;
+      width: 5rem;
+      right: 16px;
+      top: 5px;
+      padding: 10px;
     }
 
     .cardInfo {
@@ -458,7 +439,7 @@ div.shadow.slideIframe2 {
 
     .slideContent {
       width: 94vw;
-      height: 186vw;
+      height: 190vw;
       right: 20vw;
     }
 
@@ -597,10 +578,10 @@ div.shadow.slideIframe2 {
 
     .EEhamburger {
       border-radius: 5px;
-      height: auto;
-      width: 11rem;
-      right: 64px;
-      top: 6px;
+      height: 4rem;
+      width: 4rem;
+      right: 3px;
+      top: 21px;
     }
 
     .slideContentInner {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { bool, func } from 'prop-types';
 import { StyledBurger } from './Burger.styled';
-import Hamburger from '../../images/EEhamburger.png';
+import Hamburger from '../../images/EEcube1.png';
 import '../../style/swiper.scss';
 
 const Burger = ({ open, setOpen, ...props }) => {
